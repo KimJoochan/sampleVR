@@ -78,9 +78,26 @@ $(document).ready(() => {
     $('#nt_ham').click(function () {
         $('#mb_nav').slideToggle();
     })
+    $(window).resize(function () {
+        ww = $(window).width();
+        if (ww < 710) {
+            $('#mb_nav').hide();
+        } else {
+            $('#mb_nav').show();
+        }
+    })
+    if (ww < 710) {
+        $('#mb_nav').hide();
+    } else {
+        $('#mb_nav').show();
+    }
     $('#mb_link_tag').click(function (e) {
         e.preventDefault();
-        $('#mb_nav').slideToggle();
+        if (ww < 710) {
+            $('#mb_nav').slideUp();
+        } else {
+            $('#mb_nav').show();
+        }
         $('#mb_link_modal').modal('show')
     })
     //스와이퍼
@@ -126,7 +143,7 @@ $(document).ready(() => {
                             $('.tooltiptext').css({
                                 visibility: 'hidden'
                             });
-                        },1000)
+                        }, 1000)
                     }
                 }).modal('show');
                 break;
@@ -155,7 +172,7 @@ $(document).ready(() => {
                             $('.tooltiptext').css({
                                 visibility: 'hidden'
                             });
-                        },1000)
+                        }, 1000)
                     }
                 }).modal('show');
                 break;

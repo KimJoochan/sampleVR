@@ -60,19 +60,28 @@ img {
     }
 
     #nav {
-        width: 690px;
+        overflow: hidden;
         height: 60px;
-        margin: 0 auto;
-        margin-top: 10px;
+        float: left;
+        /* margin: 0 auto; */
+        position: absolute;
+        /* margin-top: 10px; */
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     #nav > li {
-        width: 110px;
+        width: auto;
         height: 100%;
         float: left;
         line-height: 60px;
         position: relative;
-        margin-right: 5px;
+        margin-right: 25px;
+    }
+
+    #nav > li:last-child {
+        margin: 0;
     }
 
     #nav > li::after {
@@ -625,10 +634,385 @@ img {
     #mbLink {
         display: none;
     }
+}
+
+@media all and (max-width:1210px) and (min-width:720px) {
+    .nt_display {
+        display: none;
+    }
+
+    .wrap {
+        width: 100%;
+        height: auto;
+    }
+
+    section {
+        width: 100%;
+        height: auto;
+        float: left;
+    }
+
+    /*테블릿 타이틀*/
+    h3.title {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    /*테블릿 네비바*/
+    nav {
+        width: 100%;
+        height: 48px;
+        float: left;
+        position: fixed;
+        z-index: 999;
+        background-color: #efefef;
+    }
+
+    #logo {
+        width: 120px;
+        height: auto;
+        margin: 0;
+        float: left;
+    }
+
+    #logo > img {
+        width: 100%;
+        height: auto;
+        float: left;
+    }
+
+    #nt_ham {
+        display: none;
+    }
+
+    #mb_nav {
+        width: 65%;
+        height: 100%;
+        float: left;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #mb_nav > li {
+        width: auto;
+        height: 100%;
+        float: left;
+        margin-right: 5%;
+    }
+
+    #mb_nav > li > a {
+        display: block;
+        width: 100%;
+        line-height: 48px;
+        font-size: 16px;
+        float: left;
+        text-shadow: 1px 1px 1px gray;
+    }
+
+    /*모바일 배너 스와이퍼*/
+
+    #ban {
+        margin-top: 48px;
+    }
+
+    #mb_mask {
+        width: 100%;
+        height: 800px;
+        float: left;
+        text-align: center;
+        line-height: 800px;
+    }
+
+
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+    }
+
+    /*모바일 자기 소개*/
+    #mb_intMid {
+        width: 100%;
+        height: auto;
+        float: left;
+        position: relative;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    #mb_intMid > img {
+        display: block;
+        width: 60%;
+        height: auto;
+        margin: 0 auto;
+
+    }
+
+    /*타이틀*/
+    .mb_title {
+        width: 100%;
+        height: 60px;
+        font-size: 20px;
+        line-height: 60px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    /*자세히보기*/
+    #mb_more {
+        margin: 30px auto;
+        display: block;
+    }
+
+    /*모바일 자기 소개 글*/
+    #mb_sub_int {
+        width: 70%;
+        height: 100px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-top: 30px;
+        text-align: left;
+    }
+
+    /*부릉 그래프*/
+    #mb_graph {
+        width: 100%;
+        height: 70vw;
+        float: left;
+    }
+
+    #mb_graph > li {
+        width: 50%;
+        height: 50%;
+        float: left;
+        border: 1px solid cyan;
+        box-sizing: border-box;
+    }
+
+    .mb_graph_com {
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    /*모바일 인터뷰*/
+    #mb_interview {
+        width: 100%;
+        height: 50vw;
+        float: left;
+        position: relative;
+    }
+
+    #mb_int_wrap {
+        width: 100%;
+        height: 100%;
+        float: left;
+        position: relative;
+    }
+
+    #mb_int_wrap > li {
+        width: 100%;
+        height: 100%;
+        float: left;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #mb_int_wrap > li > img {
+        width: 100%;
+        height: 100%;
+        float: left;
+        opacity: 0.5;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .mb_int_bub {
+        width: 90%;
+        height: 90%;
+        border: 1px solid black;
+        margin: 0 auto;
+        margin-top: 3%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 20px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .mb_int_bub > img {
+        width: 20%;
+        height: auto;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        opacity: 0.5;
+    }
+
+    /*모바일 직원리스트*/
+    #emlist {
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .closeCir {
+        display: none;
+    }
+
+    #emlist > li {
+        width: 50%;
+        height: 100%;
+        float: left;
+        border: 1px solid cyan;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .emCir {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .emCir > img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /*모바일 링크*/
+    #mbLink {
+        width: 80%;
+        height: auto;
+        margin: 15px auto;
+    }
+
+    #mbLink > li {
+        width: 25%;
+        height: auto;
+        float: left;
+        margin-right: 10%;
+        position: relative;
+    }
+
+    #mbLink > li > img {
+        width: 80%;
+        height: auto;
+        float: left;
+    }
+
+    #mbLink > li:first-child {
+        margin-left: 5%;
+    }
+
+    #mbLink > li:last-child {
+        margin: 0;
+    }
+
+    .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 999;
+        left: -12px;
+    }
+
+
+
+    /*모바일 네비바에서 나오는 링크*/
+    #modalWrap {
+        width: 100%;
+        height: 20vh;
+        float: left;
+        position: relative;
+    }
+
+    #mbLinkMod {
+        width: 65%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #mbLinkMod > li {
+        width: 23%;
+        height: auto;
+        float: left;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    #mbLinkMod > li > img {
+        width: 100%;
+        height: auto;
+        float: left;
+    }
+
+    .bubble {
+        display: none;
+    }
+
+    /*모바일 풋터*/
+    footer {
+        width: 100%;
+        height: 100px;
+        float: left;
+        background-color: pink;
+        margin-top: 10px;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+
+    address {
+        font-size: 14px;
+        font-style: normal;
+        text-align: center;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    #fotImg {
+        width: 100px;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 10px;
+
+    }
+
+    #fotImg > img {
+        width: 100%;
+        height: auto;
+        float: left;
+    }
 
 }
 
-@media all and (max-width:1209px) {
+@media all and (max-width:720px) {
     .wrap {
         width: 100%;
         height: auto;
@@ -945,23 +1329,20 @@ img {
         left: -12px;
     }
 
-    
+
 
     /*모바일 네비바에서 나오는 링크*/
     #modalWrap {
         width: 100%;
-        height: 15vh;
+        height: 20vh;
         float: left;
         position: relative;
     }
 
     #mbLinkMod {
         width: 65%;
-        height: 100%;
-        float: left;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        height: auto;
+        margin: 0 auto;
     }
 
     #mbLinkMod > li {

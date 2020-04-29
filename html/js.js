@@ -78,19 +78,24 @@ $(document).ready(() => {
     $('#nt_ham').click(function () {
         $('#mb_nav').slideToggle();
     })
+    if (ww >= 1185) {
+        $('#mb_nav').hide();
+    } else if (ww < 1185 && ww >= 684) {
+        $('#mb_nav').show();
+    } else if (ww < 684) {
+        $('#mb_nav').hide();
+    }
     $(window).resize(function () {
         ww = $(window).width();
-        if (ww < 710) {
-            $('#mb_nav').hide();
-        } else {
-            $('#mb_nav').show();
-        }
-    })
-    if (ww < 710) {
+        console.log(ww)
+        if (ww >= 1185) {
         $('#mb_nav').hide();
-    } else {
+    } else if (ww < 1185 && ww >= 684) {
         $('#mb_nav').show();
+    } else if (ww < 684) {
+        $('#mb_nav').hide();
     }
+    })
     $('#mb_link_tag').click(function (e) {
         e.preventDefault();
         if (ww < 710) {

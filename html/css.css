@@ -25,7 +25,7 @@ img {
 }
 
 /*화면 해상도 1200px까지 레이아웃*/
-@media all and (min-width:1210px) and (max-width:1920px) {
+@media all and (max-width:1920px) and (min-width:1210px) {
     .wrap {
         width: 1200px;
         height: auto;
@@ -636,7 +636,7 @@ img {
     }
 }
 
-@media all and (max-width:1210px) and (min-width:720px) {
+@media all and (max-width:1209px) and (min-width:701px) {
     .nt_display {
         display: none;
     }
@@ -712,7 +712,7 @@ img {
         text-shadow: 1px 1px 1px gray;
     }
 
-    /*모바일 배너 스와이퍼*/
+    /*테블릿 배너 스와이퍼*/
 
     #ban {
         margin-top: 48px;
@@ -744,7 +744,7 @@ img {
         align-items: center;
     }
 
-    /*모바일 자기 소개*/
+    /*테블릿 자기 소개*/
     #mb_intMid {
         width: 100%;
         height: auto;
@@ -778,7 +778,7 @@ img {
         display: block;
     }
 
-    /*모바일 자기 소개 글*/
+    /*테블릿 자기 소개 글*/
     #mb_sub_int {
         width: 70%;
         height: 100px;
@@ -810,7 +810,7 @@ img {
         margin: 0 auto;
     }
 
-    /*모바일 인터뷰*/
+    /*테블릿 인터뷰*/
     #mb_interview {
         width: 100%;
         height: 50vw;
@@ -866,7 +866,7 @@ img {
         opacity: 0.5;
     }
 
-    /*모바일 직원리스트*/
+    /*테블릿 직원리스트*/
     #emlist {
         width: 80%;
         height: 100%;
@@ -899,7 +899,7 @@ img {
         margin: 0 auto;
     }
 
-    /*모바일 링크*/
+    /*테블릿 링크*/
     #mbLink {
         width: 80%;
         height: auto;
@@ -945,10 +945,10 @@ img {
 
 
 
-    /*모바일 네비바에서 나오는 링크*/
+    /*테블릿 네비바에서 나오는 링크*/
     #modalWrap {
         width: 100%;
-        height: 20vh;
+        height: 50vh;
         float: left;
         position: relative;
     }
@@ -1012,7 +1012,7 @@ img {
 
 }
 
-@media all and (max-width:720px) {
+@media all and (max-width:700px) {
     .wrap {
         width: 100%;
         height: auto;
@@ -1082,7 +1082,6 @@ img {
         top: 100%;
         left: 0;
         background-color: greenyellow;
-        display: none;
     }
 
     #mb_nav > li {
@@ -1334,7 +1333,7 @@ img {
     /*모바일 네비바에서 나오는 링크*/
     #modalWrap {
         width: 100%;
-        height: 20vh;
+        height: 50vh;
         float: left;
         position: relative;
     }

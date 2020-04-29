@@ -1,10 +1,11 @@
 $(document).ready(() => {
     /*url 변경*/
     var oldUrl = "https://kimjoochan.github.io/sampleVR/html/"; // 기본 URL
-    alert(oldUrl)
     var changeUrl = 'samplevr.com'; // 기본 URL로 사이트 접속 시 변경하고 싶은 URL
     var urlString = location.href;
-   
+   console.log(oldUrl);
+   console.log(urlString);
+   console.log(urlString.match(oldUrl));
     if (urlString.match(oldUrl)) {
        
     } else {

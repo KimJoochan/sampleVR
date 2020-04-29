@@ -1,4 +1,15 @@
 $(document).ready(() => {
+    /*url 변경*/
+    var oldUrl = "https://kimjoochan.github.io/sampleVR/html/"; // 기본 URL
+    alert(oldUrl)
+    var changeUrl = 'samplevr.com'; // 기본 URL로 사이트 접속 시 변경하고 싶은 URL
+    var urlString = location.href;
+   
+    if (urlString.match(oldUrl)) {
+       
+    } else {
+        // 주소창에 입력한 주소가 oldURL과 다를 경우 아무런 행위도 하지않는다.
+    }
     /*배너 제이쿼리*/
     let ww = $(window).width();
     let baCount = 0;
@@ -89,12 +100,12 @@ $(document).ready(() => {
         ww = $(window).width();
         console.log(ww)
         if (ww >= 1185) {
-        $('#mb_nav').hide();
-    } else if (ww < 1185 && ww >= 684) {
-        $('#mb_nav').show();
-    } else if (ww < 684) {
-        $('#mb_nav').hide();
-    }
+            $('#mb_nav').hide();
+        } else if (ww < 1185 && ww >= 684) {
+            $('#mb_nav').show();
+        } else if (ww < 684) {
+            $('#mb_nav').hide();
+        }
     })
     $('#mb_link_tag').click(function (e) {
         e.preventDefault();

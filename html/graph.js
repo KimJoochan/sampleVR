@@ -5,10 +5,7 @@ window.onload = function () {
             ['판매량', 30, 60, 80, 100, 120],
             ['배달값', 130, 110, 90, 80, 50],
         ],
-        type: 'bar',
-        types: {
-            배달값: 'line',
-        }
+        type: 'bar'
     }
     /*모바일 지역구 막대그래프 자료*/
     var chart3Data = {
@@ -78,7 +75,7 @@ window.onload = function () {
         },
         data: {
             columns: columns,
-            type: 'pie'
+            type: 'bar'
         },
         pie: {
             label: {
@@ -99,7 +96,7 @@ window.onload = function () {
             show: false
         },
         legend: {
-            show: true
+            show: false
         },
     })
 }

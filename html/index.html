@@ -3,15 +3,17 @@
 <html>
 
 <head>
-    <title>Page Title</title>
+    <title>SampleKJN</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link href="c3.min.css" rel="stylesheet" type="text/css">
     <link href="css.css" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
     <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-animateNumber/0.0.14/jquery.animateNumber.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
@@ -82,17 +84,18 @@
                 </div>
             </div>
             <ul id="banWrap">
-                <li><img src="img/ban1.png"></li>
-                <li><img src="img/ban2.png"></li>
+                <li><img src="img/city.gif"></li>
+                <li><img src="img/forest.gif"></li>
+                <li><img src="img/city2.gif"></li>
                 <li><img src="img/ban3.png"></li>
             </ul>
         </div>
         <div id="mb_mask">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide"><img src="img/mbcity1.gif"></div>
+                    <div class="swiper-slide"><img src="img/mbcity2.gif"></div>
+                    <div class="swiper-slide"><img src="img/ban3.png"></div>
                 </div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next"></div>
@@ -112,10 +115,8 @@
             <div id="mb_intMid">
                 <p class="mb_title">사장님의 소개</p>
                 <img src="img/intro.png">
-                <p id="mb_sub_int">나는 누구 인가요????</p>
-                <button class="ui primary button" id="mb_more">
-                    자세히 보기
-                </button>
+                <p id="mb_sub_int">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+
                 <div class="ui longer modal" id="mb_more_dis">
                     <i class="close icon"></i>
                     <div class="header">
@@ -153,12 +154,14 @@
                 </li>
                 <li>
                     <h3 id="graTitle">전체 이용자 수 증가</h3>
+                    <img src="img/userIncrease.png">
+                    <!-- <h3 id="graTitle">전체 이용자 수 증가</h3>
                     <div id="canvas">
                         <span>CountUp:<span id="co">0</span></span>
                         <div id="arrow"></div>
                         <div id="arrow2"></div>
                         <div id="arrow3"></div>
-                    </div>
+                    </div>-->
                 </li>
             </ul>
             <ul id="botGraph" class="nt_display">
@@ -175,7 +178,8 @@
                     <div id="saveChart_1" class="mb_graph_com"></div>
                 </li>
                 <li>
-
+                    <p class="mb_sub_title">사용자 증가</p>
+                    <img src="img/userIncrease.png">
                 </li>
                 <li></li>
             </ul>
@@ -187,7 +191,7 @@
             <ul id="topInt" class="nt_display">
                 <li>
                     <div class="intBubble">
-                        부산진구 인터뷰 : </div>
+                        부산진구 인터뷰 : <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </span></div>
                 </li>
                 <li class="symbol">
                     <div class="symbolImg">
@@ -201,18 +205,27 @@
                 </li>
                 <li>
                     <div class="intBubble2">
-                        부산 동래구 인터뷰 : </div>
+                        부산 동래구 인터뷰 :<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </span> </div>
                 </li>
             </ul>
             <div id="mb_interview">
+               <ul id="mb_pag">
+                   <li class="on">1</li>
+                   <li>2</li>
+               </ul>
                 <ul id="mb_int_wrap">
                     <li>
                         <div class="mb_int_bub">
-                            부산진구 인터뷰 :
+                            부산진구 인터뷰 :<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </span>
                             <img src="img/symbol1.png">
                         </div>
                     </li>
-                    <li></li>
+                    <li>
+                        <div class="mb_int_bub">
+                            동래구 인터뷰 :<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </span>
+                            <img src="img/symbol2.png">
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -224,8 +237,12 @@
                 <li>
                     <div class="emCir">
                         <img src="img/em1.png">
-                        <div class="closeCir c_left"></div>
-                        <div class="closeCir c_right"></div>
+                        <div class="closeCir c_left">
+                            <img src="img/em2_h1.png">
+                        </div>
+                        <div class="closeCir c_right">
+                            <img src="img/em2_h1.png">
+                        </div>
                     </div>
                 </li>
                 <li>
@@ -235,22 +252,30 @@
                             <img src="img/em2_h1.png">
                         </div>
                         <div class="closeCir c_right c_img">
-                            <img src="img/em2_h2.png">
+                            <img src="img/em2_h1.png">
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="emCir">
                         <img src="img/em1.png">
-                        <div class="closeCir c_left"></div>
-                        <div class="closeCir c_right"></div>
+                        <div class="closeCir c_left">
+                            <img src="img/em1_h1.png">
+                        </div>
+                        <div class="closeCir c_right">
+                            <img src="img/em1_h2.png">
+                        </div>
                     </div>
                 </li>
                 <li>
                     <div class="emCir">
                         <img src="img/em2.png">
-                        <div class="closeCir c_left"></div>
-                        <div class="closeCir c_right"></div>
+                        <div class="closeCir c_left">
+                            <img src="img/em1_h1.png">
+                        </div>
+                        <div class="closeCir c_right">
+                            <img src="img/em1_h2.png">
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -287,7 +312,7 @@
                         <div class="header">KakaoTalk</div>
                         <div class="content">
                             <div class="ui input">
-                                <input type="text" value="sample" id="kaCopied" readonly >
+                                <input type="text" value="sample" id="kaCopied" readonly>
                             </div>
                         </div>
                         <div class="actions">
@@ -323,7 +348,7 @@
                         </div>
                         <div class="actions">
                             <div class="ui approve button mbtn" data-clipboard-target="#emCopied">copy
-                            
+
                             </div>
                             <div class="ui cancel button">Cancel</div>
                         </div>

@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     color: #333;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 a {
@@ -103,8 +104,6 @@ img {
         display: block;
         font-size: 24px;
         text-align: center;
-        font-weight: 300;
-        text-shadow: 1px 1px 1px #333;
     }
 
     /*배너*/
@@ -115,14 +114,14 @@ img {
 
     #mask {
         width: 100%;
-        height: auto;
+        height: 90vh;
         float: left;
         position: relative;
         overflow: hidden;
     }
 
     #banWrap {
-        width: 300%;
+        width: 400%;
         height: auto;
         float: left;
         position: relative;
@@ -131,7 +130,7 @@ img {
     }
 
     #banWrap > li {
-        width: 33.33%;
+        width: 25%;
         height: 100%;
         float: left;
     }
@@ -154,10 +153,14 @@ img {
     }
 
     #maskMark > img {
-        width: 100%;
+        width: 85%;
         height: auto;
         float: left;
+        position: absolute;
         opacity: 0.7;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     #butWrap {
@@ -223,6 +226,16 @@ img {
         height: 100%;
         float: left;
         position: relative;
+    }
+
+    #topGraph > li > img {
+        width: 70%;
+        height: auto;
+        float: left;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     /*그래프의 공통상항*/
@@ -442,17 +455,14 @@ img {
     }
 
     .closeCir {
-        width: 51%;
+        width: 50%;
         height: 100%;
         float: left;
         position: absolute;
         top: 0;
-        background-color: rgba(0, 255, 255, 1);
+        background-color: rgba(0, 0, 0, 0.7);
     }
 
-    .c_img {
-        background-color: gainsboro;
-    }
 
     .c_left {
         left: 0;
@@ -658,6 +668,7 @@ img {
         height: auto;
         text-align: center;
         margin: 15px 0;
+        font-size: 30px;
     }
 
     /*테블릿 네비바*/
@@ -688,28 +699,24 @@ img {
     }
 
     #mb_nav {
-        width: 65%;
+        width: 75%;
         height: 100%;
-        float: left;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        display: flex;
     }
 
     #mb_nav > li {
-        width: auto;
+        flex-grow: 1;
         height: 100%;
         float: left;
-        margin-right: 5%;
     }
 
     #mb_nav > li > a {
         display: block;
         width: 100%;
+        text-align: center;
         line-height: 48px;
-        font-size: 16px;
+        font-size: 20px;
         float: left;
-        text-shadow: 1px 1px 1px gray;
     }
 
     /*테블릿 배너 스와이퍼*/
@@ -724,6 +731,12 @@ img {
         float: left;
         text-align: center;
         line-height: 800px;
+    }
+
+    #mb_mask img {
+        width: 100%;
+        height: auto;
+        float: left;
     }
 
 
@@ -756,20 +769,20 @@ img {
 
     #mb_intMid > img {
         display: block;
-        width: 60%;
+        width: 40%;
         height: auto;
         margin: 0 auto;
 
     }
 
     /*타이틀*/
-    .mb_title {
+    #mb_intMid > .mb_title {
         width: 100%;
         height: 60px;
-        font-size: 20px;
+        font-size: 30px;
         line-height: 60px;
-        font-weight: 600;
         text-align: center;
+        margin-top: 30px;
     }
 
     /*자세히보기*/
@@ -780,13 +793,14 @@ img {
 
     /*테블릿 자기 소개 글*/
     #mb_sub_int {
-        width: 70%;
-        height: 100px;
+        width: 85%;
+        height: 200px;
         border: 1px solid black;
         box-sizing: border-box;
-        margin: 0 auto;
-        margin-top: 30px;
+        margin: 30px auto;
         text-align: left;
+        font-size: 22px;
+        overflow-y: scroll;
     }
 
     /*부릉 그래프*/
@@ -802,6 +816,24 @@ img {
         float: left;
         border: 1px solid cyan;
         box-sizing: border-box;
+        position: relative;
+    }
+
+    .mb_sub_title {
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin: 0;
+    }
+
+    #mb_graph > li > img {
+        width: 75%;
+        height: auto;
+        float: left;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .mb_graph_com {
@@ -818,6 +850,33 @@ img {
         position: relative;
     }
 
+    #mb_pag {
+        width: 90px;
+        height: 30px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        z-index: 9;
+        justify-content: space-around;
+    }
+
+    #mb_pag > li {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        line-height: 30px;
+        background-color: cadetblue;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #mb_pag > li.on {
+        background-color: aquamarine;
+    }
+
     #mb_int_wrap {
         width: 100%;
         height: 100%;
@@ -832,6 +891,11 @@ img {
         position: absolute;
         top: 0;
         left: 0;
+        display: none;
+    }
+
+    #mb_int_wrap > li:nth-child(1) {
+        display: block;
     }
 
     #mb_int_wrap > li > img {
@@ -855,6 +919,16 @@ img {
         border-radius: 20px;
         box-sizing: border-box;
         position: relative;
+        font-size: 24px;
+    }
+
+
+    .mb_int_bub > span {
+        font-size: 20px;
+        display: block;
+        text-align: left;
+        margin-top: 10px;
+        line-height: 25px;
     }
 
     .mb_int_bub > img {
@@ -1081,7 +1155,7 @@ img {
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: greenyellow;
+        background-color: #12c844;
     }
 
     #mb_nav > li {
@@ -1093,7 +1167,8 @@ img {
 
     #mb_nav > li > a {
         display: block;
-        font-size: 18px;
+        font-size: 20px;
+        color: #efefef;
     }
 
 
@@ -1105,12 +1180,17 @@ img {
 
     #mb_mask {
         width: 100%;
-        height: 800px;
+        height: 400px;
         float: left;
         text-align: center;
         line-height: 800px;
     }
 
+    #mb_mask img {
+        width: 100%;
+        height: auto;
+        float: left;
+    }
 
     .swiper-container {
         width: 100%;
@@ -1141,7 +1221,7 @@ img {
 
     #mb_intMid > img {
         display: block;
-        width: 60%;
+        width: 50%;
         height: auto;
         margin: 0 auto;
 
@@ -1165,13 +1245,14 @@ img {
 
     /*모바일 자기 소개 글*/
     #mb_sub_int {
-        width: 70%;
-        height: 100px;
+        width: 90%;
+        height: 150px;
         border: 1px solid black;
         box-sizing: border-box;
-        margin: 0 auto;
-        margin-top: 30px;
+        margin: 30px auto;
         text-align: left;
+        overflow-y: scroll;
+        font-size: 20px;
     }
 
     /*부릉 그래프*/
@@ -1187,6 +1268,24 @@ img {
         float: left;
         border: 1px solid cyan;
         box-sizing: border-box;
+        position: relative;
+    }
+
+    .mb_sub_title {
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin: 0;
+    }
+
+    #mb_graph > li > img {
+        width: 75%;
+        height: auto;
+        float: left;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .mb_graph_com {
@@ -1228,10 +1327,17 @@ img {
         top: 0;
         left: 0;
     }
+    #mb_int_wrap span{
+        display: block;
+        font-size: 20px;
+        text-align: left;
+        line-height: 25px;
+        margin-top: 10px;
+    }
 
     .mb_int_bub {
         width: 90%;
-        height: 90%;
+        height: 80%;
         border: 1px solid black;
         margin: 0 auto;
         margin-top: 3%;
@@ -1240,6 +1346,7 @@ img {
         border-radius: 20px;
         box-sizing: border-box;
         position: relative;
+        font-size: 24px;
     }
 
     .mb_int_bub > img {
@@ -1249,6 +1356,33 @@ img {
         bottom: 10px;
         right: 10px;
         opacity: 0.5;
+    }
+
+    #mb_pag {
+        width: 90px;
+        height: 30px;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        z-index: 9;
+        justify-content: space-around;
+    }
+
+    #mb_pag > li {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        line-height: 30px;
+        background-color: cadetblue;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #mb_pag > li.on {
+        background-color: aquamarine;
     }
 
     /*모바일 직원리스트*/
@@ -1327,8 +1461,6 @@ img {
         z-index: 999;
         left: -12px;
     }
-
-
 
     /*모바일 네비바에서 나오는 링크*/
     #modalWrap {

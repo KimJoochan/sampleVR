@@ -104,18 +104,41 @@
         </div>
     </section>
     <section id="introduce">
-        <h3 class="title nt_display">introduce</h3>
         <div class="wrap">
             <ul id="intMid" class="nt_display">
-                <li></li>
+                <li class="intI">
+                    <div class="intImg">
+                    </div>
+                </li>
                 <li>
-                    <img src="img/intro.png">
+                    <ul class="intTe">
+                        <li>
+                            <h3 class="title">About Me</h3>
+                        </li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </li>
             </ul>
             <div id="mb_intMid">
-                <p class="mb_title">사장님의 소개</p>
+               <ul id="half">
+                   <li>
+                       <div class="intImg"></div>
+                   </li>
+                   <li>
+                       <ul class="intTe">
+                        <li>
+                            <h3 class="title">About Me</h3>
+                        </li>
+                        <li>
+                            <p id="mb_sub_int">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
+                        </li>
+                    </ul>
+                   </li>
+               </ul>
+                <!--<p class="mb_title">사장님의 소개</p>
                 <img src="img/intro.png">
-                <p id="mb_sub_int">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                <p id="mb_sub_int">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>-->
 
                 <div class="ui longer modal" id="mb_more_dis">
                     <i class="close icon"></i>
@@ -209,10 +232,10 @@
                 </li>
             </ul>
             <div id="mb_interview">
-               <ul id="mb_pag">
-                   <li class="on">1</li>
-                   <li>2</li>
-               </ul>
+                <ul id="mb_pag">
+                    <li class="on">1</li>
+                    <li>2</li>
+                </ul>
                 <ul id="mb_int_wrap">
                     <li>
                         <div class="mb_int_bub">
@@ -232,7 +255,23 @@
     </section>
     <section id="employee">
         <h3 class="title">직원들</h3>
-        <div class="wrap">
+        <ul id="emplist">
+            <li>
+                <div class="empImg"></div>
+                <div class="empText"></div>
+            </li>
+            <li>
+                <div class="empImg"></div>
+            </li>
+            <li>
+                <div class="empImg"></div>
+            </li>
+            <li>
+                <div class="empImg"></div>
+            </li>
+        </ul>
+        <!--첫번째 제안-->
+        <!--<div class="wrap">
             <ul id="emlist">
                 <li>
                     <div class="emCir">
@@ -279,11 +318,29 @@
                     </div>
                 </li>
             </ul>
-        </div>
+        </div>-->
     </section>
     <section id="link">
         <div class="wrap">
-            <ul id="linkIcon" class="nt_display">
+            <ul id="linkWra" class="nt_display">
+                <li>
+                    <div class="linkImg">
+                        <img src="img/email.png">
+                    </div>
+                    <p>email</p>
+                    <p>sample@sample.com</p>
+                </li>
+                <li>
+                    <div class="linkImg"><img src="img/phone.png"></div><p>phone</p><p>010-0000-0000</p>
+                </li>
+                <li>
+                    <div class="linkImg"><img src="img/kakao.png"></div><p>kakao</p><p>sample@sample.com</p>
+                </li>
+                <li>
+                    <div class="linkImg"><img src="img/blog.png"></div><p>blog</p><p>www.naver.com</p>
+                </li>
+            </ul>
+            <!--<ul id="linkIcon" class="nt_display">
                 <li>
                     <img src="img/kakao.png" alt="phone">
                     <div class="bubble">
@@ -303,7 +360,7 @@
                         <p>이메일 주소 : </p><a href="mailto:jc5240240@naver.com">jc5240240@naver.com</a>
                     </div>
                 </li>
-            </ul>
+            </ul>-->
             <ul id="mbLink" class="mblinkBut">
                 <li>
                     <img src="img/kakao.png" alt="kakao">
@@ -350,6 +407,23 @@
                             <div class="ui approve button mbtn" data-clipboard-target="#emCopied">copy
 
                             </div>
+                            <div class="ui cancel button">Cancel</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/blog.png" alt="kakao">
+                    <span class="tooltiptext tool_kakao">kakao copied</span>
+                    <div class="ui modal" id="kakao">
+                        <div class="header">blog</div>
+                        <div class="content">
+                            <div class="ui input">
+                                <input type="text" value="sample" id="kaCopied" readonly>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <div class="ui approve button mbtn" data-clipboard-target="#kaCopied">copy</div>
+
                             <div class="ui cancel button">Cancel</div>
                         </div>
                     </div>

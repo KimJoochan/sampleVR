@@ -188,14 +188,23 @@ img {
 
 
     /*자기소개*/
+    #introduce {
+        background-color: #2f2f2f;
+    }
+
     #intMid {
         width: 100%;
         height: 100%;
         float: left;
+        margin-top: 80px;
+    }
+
+    #intMid > li.intI {
+        width: 570px;
     }
 
     #intMid > li {
-        width: 50%;
+        width: 630px;
         height: 600px;
         float: left;
         margin-top: 30px;
@@ -204,13 +213,65 @@ img {
         position: relative;
     }
 
-    #intMid > li > img {
-        width: 70%;
-        height: auto;
+    .intImg::before {
+        content: "";
+        display: block;
+        width: 370px;
+        height: 460px;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        background-color: #efefef;
+        top: -65px;
+        left: 55px;
+    }
+
+    .intImg {
+        width: 370px;
+        height: 460px;
+        position: absolute;
+        border: 10px solid #05cc82;
+        left: 60px;
+        top: 120px;
+        box-sizing: border-box;
+    }
+
+    .intTe {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 125px;
+    }
+
+    .intTe > li {
+        width: 100%;
+        border: 1px solid black;
+        height: 50px;
+    }
+
+    .intTe * {
+        color: #efefef;
+        text-align: left;
+    }
+
+    .intTe h3.title {
+        width: 100%;
+        height: auto;
+        float: left;
+        margin: 0;
+        font-size: 30px;
+        font-weight: 400;
+        position: relative;
+    }
+
+    .intTe h3.title::after {
+        content: '';
+        width: 100px;
+        height: 2px;
+        background-color: aqua;
+        position: absolute;
+        top: 50px;
+        left: 0;
     }
 
     /*부릉이란 그래프*/
@@ -315,7 +376,7 @@ img {
         width: 100%;
         height: 300px;
         float: left;
-        background-color: salmon;
+        background-color: #efefef;
     }
 
     #botGraph > li {
@@ -419,10 +480,18 @@ img {
     /*직원소개*/
     #employee {
         width: 100%;
-        height: 600px;
+        height: 650px;
         float: left;
+        display: flex;
+        flex-direction: column;
+        background-color: #262a33;
     }
 
+    #employee > h3.title {
+        color: #efefef;
+    }
+
+    /*직원소개 첫번째 제안*/
     #emlist {
         margin-top: 40px;
         width: 100%;
@@ -435,7 +504,6 @@ img {
         height: 100%;
         float: left;
         position: relative;
-
     }
 
     .emCir {
@@ -472,12 +540,38 @@ img {
         right: 0;
     }
 
+    /*직원 소개 두번째 제안*/
+    #emplist {
+        width: 1070px;
+        height: 320px;
+        margin: 0 auto;
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #emplist > li {
+        width: 230px;
+        height: 100%;
+        border: 1px solid gray;
+        box-sizing: border-box;
+        background-color: white;
+    }
+
+    .empImg {
+        width: 100%;
+        height: 140px;
+        float: left;
+        background-color: #efefef;
+    }
+
     #link {
         width: 100%;
-        height: 120px;
+        height: auto;
         float: left;
     }
 
+    /*링크의 첫 번재 제안*/
     #linkIcon {
         width: 100%;
         height: 100%;
@@ -549,15 +643,45 @@ img {
         float: left;
     }
 
+    /*링크 두번째 제안*/
+    #linkWra {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+
+    #linkWra > li {
+        width: 145px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .linkImg {
+        width: 100%;
+        height: 110px;
+    }
+
+    #linkWra > li > p {
+        height: 30px;
+        line-height: 30px;
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+
+    .linkImg > img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+
     section {
         width: 100%;
         height: 800px;
         float: left;
-        background-color: #ffffea;
-    }
-
-    section:nth-child(2n) {
-        background-color: white;
     }
 
     /*각 섹션 타이틀*/
@@ -567,7 +691,7 @@ img {
         text-align: center;
         float: left;
         margin-top: 110px;
-        font-size: 22px;
+        font-size: 30px;
         font-weight: 400;
     }
 
@@ -749,41 +873,127 @@ img {
         text-align: center;
         font-size: 18px;
         background: #fff;
-
         display: flex;
-
         justify-content: center;
-
         align-items: center;
     }
 
     /*테블릿 자기 소개*/
     #mb_intMid {
         width: 100%;
-        height: auto;
+        height: 550px;
         float: left;
         position: relative;
-        border: 1px solid black;
         box-sizing: border-box;
     }
 
-    #mb_intMid > img {
+    #half {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: #292929;
+    }
+
+    #half > li {
+        flex-grow: 1;
+        flex-basis: 50%;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .intImg::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 314px;
+        position: absolute;
+        background-color: #efefef;
+        top: -25px;
+        left: 15px;
+    }
+
+    .intImg {
+        width: 80%;
+        height: 314px;
+        position: absolute;
+        border: 5px solid #05cc82;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        ;
+        box-sizing: border-box;
+    }
+
+    .intTe {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .intTe > li {
+        width: 100%;
+        height: auto;
+    }
+
+    .intTe * {
+        color: #efefef;
+        text-align: left;
+    }
+
+    .intTe h3.title {
+        width: 100%;
+        height: 50px;
+        float: left;
+        margin: 0;
+        font-size: 30px;
+        font-weight: 400;
+        position: relative;
+    }
+
+    .intTe h3.title::after {
+        content: '';
+        width: 100px;
+        height: 2px;
+        background-color: aqua;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .intTe > li:nth-child(2) {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    #mb_sub_int {
+        width: 100%;
+        height: 300px;
+        overflow-y: scroll;
+        box-sizing: border-box;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    /*  #mb_intMid > img {
         display: block;
         width: 40%;
         height: auto;
         margin: 0 auto;
 
-    }
+    }*/
 
     /*타이틀*/
-    #mb_intMid > .mb_title {
+    /*#mb_intMid > .mb_title {
         width: 100%;
         height: 60px;
         font-size: 30px;
         line-height: 60px;
         text-align: center;
         margin-top: 30px;
-    }
+    }*/
 
     /*자세히보기*/
     #mb_more {
@@ -792,7 +1002,7 @@ img {
     }
 
     /*테블릿 자기 소개 글*/
-    #mb_sub_int {
+    /*#mb_sub_int {
         width: 85%;
         height: 200px;
         border: 1px solid black;
@@ -801,7 +1011,7 @@ img {
         text-align: left;
         font-size: 22px;
         overflow-y: scroll;
-    }
+    }*/
 
     /*부릉 그래프*/
     #mb_graph {
@@ -951,7 +1161,38 @@ img {
         display: none;
     }
 
-    #emlist > li {
+    #emplist {
+        flex-basis: 800px;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    #emplist > li {
+        flex-basis: 320px;
+        height: 320px;
+        border: 1px solid gray;
+        box-sizing: border-box;
+        background-color: white;
+    }
+
+    #emplist > li:nth-child(3),
+    #emplist > li:nth-child(4) {
+        margin-top: 20px;
+    }
+
+
+    .empImg {
+        width: 100%;
+        height: 140px;
+        float: left;
+        background-color: #efefef;
+    }
+
+    /*#emlist > li {
         width: 50%;
         height: 100%;
         float: left;
@@ -971,20 +1212,21 @@ img {
         width: 100%;
         height: auto;
         margin: 0 auto;
-    }
+    }*/
 
     /*테블릿 링크*/
     #mbLink {
         width: 80%;
         height: auto;
         margin: 15px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
     #mbLink > li {
-        width: 25%;
+        flex-basis: 120px;
         height: auto;
-        float: left;
-        margin-right: 10%;
         position: relative;
     }
 
@@ -992,14 +1234,6 @@ img {
         width: 80%;
         height: auto;
         float: left;
-    }
-
-    #mbLink > li:first-child {
-        margin-left: 5%;
-    }
-
-    #mbLink > li:last-child {
-        margin: 0;
     }
 
     .tooltiptext {
@@ -1109,6 +1343,7 @@ img {
         height: auto;
         text-align: center;
         margin: 15px 0;
+        font-size: 26px;
     }
 
     /*모바일 네비바*/
@@ -1212,10 +1447,92 @@ img {
     /*모바일 자기 소개*/
     #mb_intMid {
         width: 100%;
-        height: auto;
+        height: 500px;
         float: left;
         position: relative;
         border: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    #half {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color: #292929;
+    }
+
+    #half > li {
+        flex-grow: 1;
+        flex-basis: 50%;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .intImg::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 314px;
+        position: absolute;
+        background-color: #efefef;
+        top: -25px;
+        left: 15px;
+    }
+
+    .intImg {
+        width: 90%;
+        height: 314px;
+        position: absolute;
+        border: 5px solid #05cc82;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        ;
+        box-sizing: border-box;
+    }
+
+    .intTe {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .intTe > li {
+        width: 100%;
+        height: auto;
+    }
+
+    .intTe * {
+        color: #efefef;
+        text-align: left;
+    }
+
+    .intTe h3.title {
+        width: 100%;
+        height: 50px;
+        float: left;
+        margin: 0;
+        font-size: 30px;
+        font-weight: 400;
+        position: relative;
+    }
+
+    .intTe h3.title::after {
+        content: '';
+        width: 100px;
+        height: 2px;
+        background-color: aqua;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .intTe > li:nth-child(2) {
+        padding: 20px;
         box-sizing: border-box;
     }
 
@@ -1245,13 +1562,11 @@ img {
 
     /*모바일 자기 소개 글*/
     #mb_sub_int {
-        width: 90%;
-        height: 150px;
-        border: 1px solid black;
-        box-sizing: border-box;
-        margin: 30px auto;
-        text-align: left;
+        width: 100%;
+        height: 300px;
         overflow-y: scroll;
+        box-sizing: border-box;
+        text-align: left;
         font-size: 20px;
     }
 
@@ -1327,7 +1642,8 @@ img {
         top: 0;
         left: 0;
     }
-    #mb_int_wrap span{
+
+    #mb_int_wrap span {
         display: block;
         font-size: 20px;
         text-align: left;
@@ -1347,6 +1663,7 @@ img {
         box-sizing: border-box;
         position: relative;
         font-size: 24px;
+        overflow-y: scroll;
     }
 
     .mb_int_bub > img {
@@ -1362,7 +1679,7 @@ img {
         width: 90px;
         height: 30px;
         position: absolute;
-        bottom: 10px;
+        bottom: 0;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
@@ -1386,7 +1703,36 @@ img {
     }
 
     /*모바일 직원리스트*/
-    #emlist {
+    #employee > .title {
+        margin-top: 30px;
+    }
+
+    #emplist {
+        flex-basis: 800px;
+        height: auto;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #emplist > li {
+        flex-basis: 300px;
+        height: 320px;
+        border: 1px solid gray;
+        box-sizing: border-box;
+        background-color: white;
+        margin-top: 20px;
+    }
+
+    .empImg {
+        width: 100%;
+        height: 140px;
+        float: left;
+        background-color: #efefef;
+    }
+
+    /*#emlist {
         width: 80%;
         height: 100%;
         margin: 0 auto;
@@ -1416,20 +1762,21 @@ img {
         width: 100%;
         height: auto;
         margin: 0 auto;
-    }
+    }*/
 
     /*모바일 링크*/
     #mbLink {
         width: 80%;
         height: auto;
         margin: 15px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
     #mbLink > li {
-        width: 25%;
+        flex-basis: 120px;
         height: auto;
-        float: left;
-        margin-right: 10%;
         position: relative;
     }
 

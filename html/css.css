@@ -112,9 +112,18 @@ img {
         height: auto;
     }
 
-    #mask {
+    /*세로길이 전체 배너 1*/
+    /*#mask {
         width: 100%;
         height: 90vh;
+        float: left;
+        position: relative;
+        overflow: hidden;
+    }*/
+    /*세로길이 절반 배너2*/
+    #mask {
+        width: 100%;
+        height: 75vh;
         float: left;
         position: relative;
         overflow: hidden;
@@ -135,10 +144,18 @@ img {
         float: left;
     }
 
+    /*세로길이 전체 배너 1*/
+    /*  #banWrap > li > img {
+        width: 100%;
+        height: auto;
+        float: left;
+    }*/
+    /*세로길이 절반 배너 2*/
     #banWrap > li > img {
         width: 100%;
         height: auto;
         float: left;
+        transform: translateY(-30%);
     }
 
     #maskMark {
@@ -152,8 +169,20 @@ img {
         z-index: 9;
     }
 
+    /*세로 길이 전체 배너1*/
+    /* #maskMark > img {
+     width: 85%;
+     height: auto;
+     float: left;
+     position: absolute;
+     opacity: 0.7;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }*/
+    /*세로 길이 절반 배너2*/
     #maskMark > img {
-        width: 85%;
+        width: 1200px;
         height: auto;
         float: left;
         position: absolute;
@@ -188,8 +217,20 @@ img {
 
 
     /*자기소개*/
+    #scroll {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+    #scroll>img {
+        width: 100%;
+        height: auto;
+        float: left;
+    }
     #introduce {
-        background-color: #2f2f2f;
+        position: relative;
+        background-color: #222;
     }
 
     #intMid {
@@ -208,8 +249,6 @@ img {
         height: 600px;
         float: left;
         margin-top: 30px;
-        border: 1px solid gray;
-        box-sizing: border-box;
         position: relative;
     }
 
@@ -680,7 +719,8 @@ img {
 
     section {
         width: 100%;
-        height: 800px;
+        /*height: 800px;*/
+        height: 90vh;
         float: left;
     }
 

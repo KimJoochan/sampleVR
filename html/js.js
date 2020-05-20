@@ -8,57 +8,6 @@ $(document).ready(() => {
     let inth = $("#interview").height();
     let eh = $("#employee").height();
     let hb = $('html,body');
-    if (wst >= 0 && wst < bh) {
-        mWel = 0;
-    } else if (wst >= bh && wst < ih + bh) {
-        mWel = 1;
-    } else if (wst >= ih + bh && wst < gh + ih + bh) {
-        mWel = 2;
-
-    } else if (wst >= gh + ih + bh && wst < inth + gh + ih + bh) {
-        mWel = 3;
-    }
-    console.log(mWel)
-    $(window).scroll(function () {
-        wst = $(window).scrollTop();
-    });
-    /*$(window).on('mousewheel', function (event, delta) {
-
-        if (delta > 0) {
-            //마우스휠을 올렸을때
-        } else if (delta < 0) {
-            //마우스휠을 내렸을때
-            if ($('body,html').is(':animated')) {
-                return;
-            } else {
-                if (wst >= 0 && wst < bh && mWel == 0) {
-                    mWel = 1;
-                    hb.animate({
-                        scrollTop: bh
-                    })
-                    console.log(mWel)
-                } else if (wst >= bh && wst < ih + bh && mWel == 1) {
-                    mWel = 2;
-                    hb.animate({
-                        scrollTop: ih + bh
-                    })
-                    console.log(mWel)
-                } else if (wst >= ih + bh && wst < gh + ih + bh && mWel == 2) {
-                    mWel = 3;
-                    hb.animate({
-                        scrollTop: gh + ih + bh
-                    })
-                    console.log(mWel)
-                } else if (wst >= gh + ih + bh && wst < inth + gh + ih + bh && mWel == 3) {
-                    mWel = 4;
-                    hb.animate({
-                        scrollTop: inth + gh + ih + bh
-                    })
-                    console.log(mWel)
-                }
-            }
-        }
-    })*/
     /*배너 제이쿼리*/
     let ww = $(window).width();
     let baCount = 0;
@@ -81,8 +30,21 @@ $(document).ready(() => {
             left: -ww * baCount
         }, 1000, 'easeInQuad')
     })
+    $(window).scroll(function(){
+        wst = $(window).scrollTop();
+        if(wst==0){
+            $('#scroll').show()
+        }else{
+            $('#scroll').fadeOut(500)
+        }
+    })
+    $('#scroll').click(function(){
+        $('html,body').animate({
+            scrollTop:bh
+        });
+    })
     //그래프 제이쿼리
-    $('#canvas').mouseenter(() => {
+    /*$('#canvas').mouseenter(() => {
         $('#arrow').animate({
             top: '90%'
         });
@@ -109,7 +71,7 @@ $(document).ready(() => {
             top: '100%'
         });
         $('#co').text(0)
-    });
+    });*/
     //직원 제이쿼라
     $('.emCir').mouseenter(function () {
         $(this).find('.c_left').animate({

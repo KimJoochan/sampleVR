@@ -64,9 +64,7 @@ img {
         overflow: hidden;
         height: 60px;
         float: left;
-        /* margin: 0 auto; */
         position: absolute;
-        /* margin-top: 10px; */
         top: 10px;
         left: 50%;
         transform: translateX(-50%);
@@ -113,13 +111,13 @@ img {
     }
 
     /*세로길이 전체 배너 1*/
-    /*#mask {
+    #mask.one {
         width: 100%;
         height: 90vh;
         float: left;
         position: relative;
         overflow: hidden;
-    }*/
+    }
     /*세로길이 절반 배너2*/
     #mask {
         width: 100%;
@@ -145,11 +143,13 @@ img {
     }
 
     /*세로길이 전체 배너 1*/
-    /*  #banWrap > li > img {
+    #banWrap.one > li > img {
         width: 100%;
         height: auto;
         float: left;
-    }*/
+        transform: translate(0)
+    }
+
     /*세로길이 절반 배너 2*/
     #banWrap > li > img {
         width: 100%;
@@ -170,16 +170,17 @@ img {
     }
 
     /*세로 길이 전체 배너1*/
-    /* #maskMark > img {
-     width: 85%;
-     height: auto;
-     float: left;
-     position: absolute;
-     opacity: 0.7;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
- }*/
+    #maskMark.one > img {
+        width: 85%;
+        height: auto;
+        float: left;
+        position: absolute;
+        opacity: 0.7;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     /*세로 길이 절반 배너2*/
     #maskMark > img {
         width: 1200px;
@@ -222,12 +223,15 @@ img {
         left: 50%;
         transform: translateX(-50%);
         cursor: pointer;
+        z-index: 99;
     }
-    #scroll>img {
+
+    #scroll > img {
         width: 100%;
         height: auto;
         float: left;
     }
+
     #introduce {
         position: relative;
         background-color: #222;
@@ -258,7 +262,9 @@ img {
         width: 370px;
         height: 460px;
         position: absolute;
-        background-color: #efefef;
+        background: url(img/sam.png) no-repeat;
+        background-size: cover;
+        background-position: center;
         top: -65px;
         left: 55px;
     }
@@ -891,12 +897,19 @@ img {
 
     #mb_mask {
         width: 100%;
-        height: 800px;
+        height: 60vw;
         float: left;
         text-align: center;
         line-height: 800px;
+        position: relative;
     }
-
+   .mb_mark{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+           transform: translate(-50%,-50%)
+    }
+    
     #mb_mask img {
         width: 100%;
         height: auto;
@@ -946,16 +959,15 @@ img {
         content: "";
         display: block;
         width: 100%;
-        height: 314px;
+        height: 40vw;
         position: absolute;
-        background-color: #efefef;
         top: -25px;
         left: 15px;
     }
 
     .intImg {
         width: 80%;
-        height: 314px;
+        height: 40vw;
         position: absolute;
         border: 5px solid #05cc82;
         top: 50%;
@@ -964,7 +976,7 @@ img {
         ;
         box-sizing: border-box;
     }
-
+ 
     .intTe {
         width: 100%;
         height: 300px;
@@ -1513,7 +1525,7 @@ img {
         content: "";
         display: block;
         width: 100%;
-        height: 314px;
+        height: 45vw;
         position: absolute;
         background-color: #efefef;
         top: -25px;
@@ -1522,7 +1534,7 @@ img {
 
     .intImg {
         width: 90%;
-        height: 314px;
+        height: 45vw;
         position: absolute;
         border: 5px solid #05cc82;
         top: 50%;
@@ -1572,7 +1584,7 @@ img {
     }
 
     .intTe > li:nth-child(2) {
-        padding: 20px;
+        padding: 3vw;
         box-sizing: border-box;
     }
 

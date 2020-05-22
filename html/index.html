@@ -26,6 +26,11 @@
 
 <body>
     <header>
+        <ul style="position: absolute;top: 0;
+           left: 0;">
+            <li><button class="banner1But">banner1</button></li>
+            <li><button class="banner2But">banner2</button></li>
+        </ul>
         <div class="wrap">
             <nav>
                 <h1 id="logo"><img src="img/logo.png" alt="logo"></h1>
@@ -90,9 +95,13 @@
         <div id="mb_mask">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/mbcity1.gif"></div>
-                    <div class="swiper-slide"><img src="img/mbcity2.gif"></div>
-                    <div class="swiper-slide"><img src="img/ban3.png"></div>
+                    <div class="swiper-slide"><img src="img/mbcity1.gif">
+                    <img src="img/banMark.png" class
+                    ="mb_mark"></div>
+                    <div class="swiper-slide"><img src="img/mbcity2.gif"><img src="img/banMark.png" class
+                    ="mb_mark"></div>
+                    <div class="swiper-slide"><img src="img/mbcity3.gif"><img src="img/banMark.png" class
+                    ="mb_mark"></div>
                 </div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next"></div>
@@ -101,7 +110,7 @@
         </div>
     </section>
     <section id="introduce">
-       <div id="scroll"><img src="img/scroll.gif"></div>
+        <div id="scroll" class="nt_display"><img src="img/scroll.gif"></div>
         <div class="wrap">
             <ul id="intMid" class="nt_display">
                 <li class="intI">
@@ -119,21 +128,21 @@
                 </li>
             </ul>
             <div id="mb_intMid">
-               <ul id="half">
-                   <li>
-                       <div class="intImg"></div>
-                   </li>
-                   <li>
-                       <ul class="intTe">
-                        <li>
-                            <h3 class="title">About Me</h3>
-                        </li>
-                        <li>
-                            <p id="mb_sub_int">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
-                        </li>
-                    </ul>
-                   </li>
-               </ul>
+                <ul id="half">
+                    <li>
+                        <div class="intImg"></div>
+                    </li>
+                    <li>
+                        <ul class="intTe">
+                            <li>
+                                <h3 class="title">About Me</h3>
+                            </li>
+                            <li>
+                                <p id="mb_sub_int">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
                 <!--<p class="mb_title">사장님의 소개</p>
                 <img src="img/intro.png">
                 <p id="mb_sub_int">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>-->
@@ -329,13 +338,19 @@
                     <p>sample@sample.com</p>
                 </li>
                 <li>
-                    <div class="linkImg"><img src="img/phone.png"></div><p>phone</p><p>010-0000-0000</p>
+                    <div class="linkImg"><img src="img/phone.png"></div>
+                    <p>phone</p>
+                    <p>010-0000-0000</p>
                 </li>
                 <li>
-                    <div class="linkImg"><img src="img/kakao.png"></div><p>kakao</p><p>sample@sample.com</p>
+                    <div class="linkImg"><img src="img/kakao.png"></div>
+                    <p>kakao</p>
+                    <p>sample@sample.com</p>
                 </li>
                 <li>
-                    <div class="linkImg"><img src="img/blog.png"></div><p>blog</p><p>www.naver.com</p>
+                    <div class="linkImg"><img src="img/blog.png"></div>
+                    <p>blog</p>
+                    <p>www.naver.com</p>
                 </li>
             </ul>
             <!--<ul id="linkIcon" class="nt_display">

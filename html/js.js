@@ -30,17 +30,41 @@ $(document).ready(() => {
             left: -ww * baCount
         }, 1000, 'easeInQuad')
     })
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         wst = $(window).scrollTop();
-        if(wst==0){
-            $('#scroll').show()
-        }else{
-            $('#scroll').fadeOut(500)
+        ww = $(window).width();
+        if (ww >= 1200) {
+            if (wst == 0) {
+                $('#scroll').show()
+            } else {
+                $('#scroll').fadeOut(500)
+            }
         }
     })
-    $('#scroll').click(function(){
+    /*배너의 크기 변화*/
+    $('.banner1But').click(function () {
+        $('#mask').addClass('one');
+        $('#banWrap').addClass('one');
+        $('#maskMark').addClass('one');
+        $('#scroll').css({
+            top: '-150px',
+            opacity: '0.7'
+        })
+        bh = $("#ban").height() + 80;
+    });
+    $('.banner2But').click(function () {
+        $('#mask').removeClass('one');
+        $('#banWrap').removeClass('one');
+        $('#maskMark').removeClass('one');
+        bh = $("#ban").height() + 80;
+        $('#scroll').css({
+            top: '0',
+            opacity: '1'
+        })
+    });
+    $('#scroll').click(function () {
         $('html,body').animate({
-            scrollTop:bh
+            scrollTop: bh
         });
     })
     //그래프 제이쿼리
@@ -140,12 +164,12 @@ $(document).ready(() => {
         $('#mb_more_dis').modal('show')
     });
     /*모바일 인터뷰*/
-    $("#mb_pag>li").click(function(){
-        var ind=$(this).index();
+    $("#mb_pag>li").click(function () {
+        var ind = $(this).index();
         $("#mb_pag>li").removeClass('on');
         $(this).addClass('on');
- $('#mb_int_wrap>li').fadeOut();
- $('#mb_int_wrap>li').eq(ind).fadeIn(500);
+        $('#mb_int_wrap>li').fadeOut();
+        $('#mb_int_wrap>li').eq(ind).fadeIn(500);
     })
     /*모바일 클립보드에 문자 저장*/
     var clipboard = new Clipboard('.mbtn');

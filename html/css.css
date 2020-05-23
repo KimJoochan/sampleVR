@@ -118,6 +118,7 @@ img {
         position: relative;
         overflow: hidden;
     }
+
     /*세로길이 절반 배너2*/
     #mask {
         width: 100%;
@@ -610,6 +611,12 @@ img {
         background-color: #efefef;
     }
 
+    .empImg > img {
+        width: 100%;
+        height: auto;
+        float: left;
+    }
+
     #link {
         width: 100%;
         height: auto;
@@ -903,13 +910,14 @@ img {
         line-height: 800px;
         position: relative;
     }
-   .mb_mark{
+
+    .mb_mark {
         position: absolute;
         top: 50%;
         left: 50%;
-           transform: translate(-50%,-50%)
+        transform: translate(-50%, -50%)
     }
-    
+
     #mb_mask img {
         width: 100%;
         height: auto;
@@ -963,6 +971,9 @@ img {
         position: absolute;
         top: -25px;
         left: 15px;
+        background: url(img/sam.png) no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
     .intImg {
@@ -976,7 +987,7 @@ img {
         ;
         box-sizing: border-box;
     }
- 
+
     .intTe {
         width: 100%;
         height: 300px;
@@ -1239,9 +1250,15 @@ img {
 
     .empImg {
         width: 100%;
-        height: 140px;
+        height: auto;
         float: left;
         background-color: #efefef;
+    }
+
+    .empImg > img {
+        width: 100%;
+        height: auto;
+        float: left;
     }
 
     /*#emlist > li {
@@ -1530,6 +1547,10 @@ img {
         background-color: #efefef;
         top: -25px;
         left: 15px;
+
+        background: url(img/sam.png) no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
     .intImg {
@@ -1779,9 +1800,15 @@ img {
 
     .empImg {
         width: 100%;
-        height: 140px;
+        height: auto;
         float: left;
-        background-color: #efefef;
+        background-color: #ffccff;
+    }
+
+    .empImg > img {
+        width: 100%;
+        height: auto;
+        float: left;
     }
 
     /*#emlist {

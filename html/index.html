@@ -25,12 +25,14 @@
 </head>
 
 <body>
+    <div id="alwaysTop"><img src="img/up.png"></div>
     <header>
         <ul style="position: absolute;top: 0;
            left: 0;">
             <li><button class="banner1But">banner1</button></li>
             <li><button class="banner2But">banner2</button></li>
         </ul>
+
         <div class="wrap">
             <nav>
                 <h1 id="logo"><img src="img/logo.png" alt="logo"></h1>
@@ -41,7 +43,10 @@
                     <li><a href="#">인터뷰</a></li>
                     <li><a href="#">직원</a></li>
                     <li><a href="#">링크</a></li>
+                    <li id="showForm"><a href="#">문의하기</a></li>
                 </ul>
+
+
                 <ul id="mb_nav">
                     <li><a href="#">인사말</a></li>
                     <li><a href="#">부릉이란</a></li>
@@ -71,6 +76,31 @@
             </nav>
         </div>
     </header>
+    <section id="form">
+        <div class="wrap">
+            <form>
+                <div id="titWrap">
+                    <h3 class="tit">상담문의</h3>
+                </div>
+                <ul id="formWrap">
+                    <li id="leftForm">
+                        <input type="text" placeholder="매장명">
+                        <input type="text" placeholder="이름">
+                        <input type="text" placeholder="휴대전화">
+                    </li>
+                    <li id="rightForm">
+                        <input type="text" placeholder="카테고리">
+                        <input type="text" placeholder="시/도">
+                        <input type="text" placeholder="시/군/구">
+                        <input type="text" placeholder="읍/면/동">
+                        <input type="text" placeholder="배달유무">
+                        <input type="text" placeholder="하루 예상 물량">
+                    </li>
+                </ul>
+                <input type="submit" id="submit" value="문의하기">
+            </form>
+        </div>
+    </section>
     <section id="ban">
         <div id="mask" class="nt_display">
             <div id="maskMark">
@@ -96,12 +126,9 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="img/mbcity1.gif">
-                    <img src="img/banMark.png" class
-                    ="mb_mark"></div>
-                    <div class="swiper-slide"><img src="img/mbcity2.gif"><img src="img/banMark.png" class
-                    ="mb_mark"></div>
-                    <div class="swiper-slide"><img src="img/mbcity3.gif"><img src="img/banMark.png" class
-                    ="mb_mark"></div>
+                        <img src="img/banMark.png" class="mb_mark"></div>
+                    <div class="swiper-slide"><img src="img/mbcity2.gif"><img src="img/banMark.png" class="mb_mark"></div>
+                    <div class="swiper-slide"><img src="img/mbcity3.gif"><img src="img/banMark.png" class="mb_mark"></div>
                 </div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next"></div>

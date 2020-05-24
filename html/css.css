@@ -25,6 +25,21 @@ img {
     border: 0;
 }
 
+#alwaysTop {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    cursor: pointer;
+    left: 85%;
+    bottom: 30px;
+    z-index: 999;
+}
+
+#alwaysTop > img {
+    width: 100%;
+    height: auto;
+}
+
 /*화면 해상도 1200px까지 레이아웃*/
 @media all and (max-width:1920px) and (min-width:1210px) {
     .wrap {
@@ -104,6 +119,97 @@ img {
         text-align: center;
     }
 
+    /*문의하기 작성하기*/
+    #form {
+        width: 100%;
+        height: 210px;
+        position: fixed;
+        z-index: 99;
+        top: 80px;
+        /*차후에 fixed*/
+        display: none;
+        background-color: #efefef;
+        padding: 30px 30px;
+        box-sizing: border-box;
+    }
+
+    #titWrap {
+        width: 100%;
+        height: auto;
+        float: left;
+        margin-bottom: 15px;
+    }
+
+    #titWrap > .tit {
+        width: auto;
+        float: left;
+        height: auto;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    #formWrap {
+        width: 80%;
+        height: 80px;
+        float: left;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #formWrap > li {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #formWrap > li:first-child {
+        width: 300px;
+    }
+
+    #formWrap > li:last-child {
+        width: 600px;
+    }
+
+    #formWrap input {
+        border: 1px solid #efefef;
+        height: 30px;
+        width: 45%;
+    }
+    #leftForm {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #leftForm > input:first-child {
+        width: 100%;
+    }
+    #rightForm {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #rightForm>input{
+        width: 23%;
+        flex-basis: 1;
+    }
+    #rightForm>input:nth-child(5),#rightForm>input:nth-child(6){
+        width: 48%;
+    }
+    #submit{
+        width: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        height: 80px;
+        float: left;
+        margin-left: 30px;
+        background-color: #05cd82;
+        color: #efefef;
+        border: 0;
+        font-size: 18px;
+    }
+    
+
     /*배너*/
     #ban {
         margin-top: 80px;
@@ -156,12 +262,12 @@ img {
         width: 100%;
         height: auto;
         float: left;
-        transform: translateY(-30%);
+        /*transform: translateY(-30%);*/
     }
 
     #maskMark {
         width: 100%;
-        height: 100%;
+        height: auto;
         float: left;
         position: absolute;
         top: 50%;
@@ -616,26 +722,32 @@ img {
         height: auto;
         float: left;
     }
-    .empText{
+
+    .empText {
         width: 100%;
         height: 180px;
         padding: 10px;
         box-sizing: border-box;
         float: left;
     }
-    .empText>p,.empText>h3{
+
+    .empText > p,
+    .empText > h3 {
         width: 100%;
         float: left;
         margin: 0;
         margin-bottom: 10px;
     }
-    .major{
+
+    .major {
         font-size: 15px;
     }
-    .emName{
+
+    .emName {
         font-size: 20px;
     }
-    .emInt{
+
+    .emInt {
         font-size: 15px;
     }
 
@@ -1282,29 +1394,36 @@ img {
         height: auto;
         float: left;
     }
-    .empText{
+
+    .empText {
         width: 100%;
         height: auto;
         float: left;
         padding: 10px;
         box-sizing: border-box;
     }
-    .empText>p,.empText>h3{
+
+    .empText > p,
+    .empText > h3 {
         width: 100%;
         float: left;
         margin: 0;
         margin-top: 10px;
     }
-    .major{
+
+    .major {
         font-size: 15px;
         display: none;
     }
-    .emName{
+
+    .emName {
         font-size: 25px;
     }
-    .emInt{
+
+    .emInt {
         font-size: 15px;
     }
+
     /*#emlist > li {
         width: 50%;
         height: 100%;
@@ -1854,27 +1973,33 @@ img {
         height: auto;
         float: left;
     }
-    .empText{
+
+    .empText {
         width: 100%;
         height: auto;
         float: left;
         padding: 1vw;
         box-sizing: border-box;
     }
-    .empText>p,.empText>h3{
+
+    .empText > p,
+    .empText > h3 {
         width: 100%;
         float: left;
         margin: 0;
         margin-top: 10px;
     }
-    .major{
+
+    .major {
         font-size: 15px;
         display: none;
     }
-    .emName{
+
+    .emName {
         font-size: 25px;
     }
-    .emInt{
+
+    .emInt {
         font-size: 15px;
     }
 

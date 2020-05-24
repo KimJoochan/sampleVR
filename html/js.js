@@ -2,12 +2,19 @@ $(document).ready(() => {
     //마우스 휠로 화면 이동
     let mWel = 0;
     let wst = $(window).scrollTop();
-    let bh = $("#ban").height() + 80;
+    let bh = Math.ceil($("#ban").height() + 80);
     let ih = $("#introduce").height();
     let gh = $("#graph").height();
     let inth = $("#interview").height();
     let eh = $("#employee").height();
     let hb = $('html,body');
+    /*네비 제이쿼리*/
+    $('#nav>li').click(function(e){
+        e.preventDefault();
+    })
+    $('#showForm').click(function(){
+        $('#form').fadeToggle()
+    })
     /*배너 제이쿼리*/
     let ww = $(window).width();
     let baCount = 0;
@@ -32,6 +39,7 @@ $(document).ready(() => {
     })
     $(window).scroll(function () {
         wst = $(window).scrollTop();
+        console.log("scrt"+wst)
         ww = $(window).width();
         if (ww >= 1200) {
             if (wst == 0) {
@@ -66,6 +74,7 @@ $(document).ready(() => {
         $('html,body').animate({
             scrollTop: bh
         });
+        console.log(bh)
     })
     //그래프 제이쿼리
     /*$('#canvas').mouseenter(() => {

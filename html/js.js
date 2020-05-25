@@ -9,11 +9,16 @@ $(document).ready(() => {
     let eh = $("#employee").height();
     let hb = $('html,body');
     /*네비 제이쿼리*/
-    $('#nav>li').click(function(e){
+    $('#nav>li').click(function (e) {
         e.preventDefault();
     })
-    $('#showForm').click(function(){
+    $('#showForm').click(function () {
         $('#form').fadeToggle()
+    })
+    $('#alwaysTop').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        })
     })
     /*배너 제이쿼리*/
     let ww = $(window).width();
@@ -39,7 +44,7 @@ $(document).ready(() => {
     })
     $(window).scroll(function () {
         wst = $(window).scrollTop();
-        console.log("scrt"+wst)
+        console.log("scrt" + wst)
         ww = $(window).width();
         if (ww >= 1200) {
             if (wst == 0) {
@@ -76,6 +81,21 @@ $(document).ready(() => {
         });
         console.log(bh)
     })
+    //폼 화면에서의 제이쿼리
+    $("#close").click(function () {
+        $('#form').fadeToggle()
+    })
+    //인터뷰 제이쿼리
+    $('.intRight').click(function(){
+        $('#topInt').animate({
+            left:'-1'*$('#topInt').width()*0.5
+        })
+    })
+    $('.intLeft').click(function(){
+        $('#topInt').animate({
+            left:0
+        })
+    })
     //그래프 제이쿼리
     /*$('#canvas').mouseenter(() => {
         $('#arrow').animate({
@@ -106,7 +126,7 @@ $(document).ready(() => {
         $('#co').text(0)
     });*/
     //직원 제이쿼라
-    $('.emCir').mouseenter(function () {
+    /*$('.emCir').mouseenter(function () {
         $(this).find('.c_left').animate({
             left: '-51%'
         });
@@ -121,7 +141,7 @@ $(document).ready(() => {
         $('.c_right').stop().animate({
             right: 0
         })
-    });
+    });*/
     //링크 제이쿼리
     $('#linkIcon>li').mouseenter(function () {
         $(this).find('.bubble').fadeIn()

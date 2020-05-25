@@ -127,10 +127,29 @@ img {
         z-index: 99;
         top: 80px;
         /*차후에 fixed*/
-        display: none;
         background-color: #efefef;
         padding: 30px 30px;
         box-sizing: border-box;
+    }
+
+    #form form {
+        width: 100%;
+        height: 100%;
+        float: left;
+        position: relative;
+    }
+
+    #close {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 20px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        line-height: 20px;
+        cursor: pointer;
+        font-size: 20px;
     }
 
     #titWrap {
@@ -175,6 +194,7 @@ img {
         height: 30px;
         width: 45%;
     }
+
     #leftForm {
         display: flex;
         flex-direction: row;
@@ -184,19 +204,24 @@ img {
     #leftForm > input:first-child {
         width: 100%;
     }
+
     #rightForm {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
-    #rightForm>input{
+
+    #rightForm > input {
         width: 23%;
         flex-basis: 1;
     }
-    #rightForm>input:nth-child(5),#rightForm>input:nth-child(6){
+
+    #rightForm > input:nth-child(5),
+    #rightForm > input:nth-child(6) {
         width: 48%;
     }
-    #submit{
+
+    #submit {
         width: auto;
         padding: 10px;
         box-sizing: border-box;
@@ -208,7 +233,7 @@ img {
         border: 0;
         font-size: 18px;
     }
-    
+
 
     /*배너*/
     #ban {
@@ -535,426 +560,459 @@ img {
         width: 25%;
         height: 100%;
         float: left;
-        border: 1px dotted gray;
+        border: 1px solid #fff;
         box-sizing: border-box;
     }
 
 
     /*구별 인터뷰*/
-    #topInt {
+    #interview {
+        height: 100vh;
+    }
+
+    #interview .wrap {
+        overflow: hidden;
+        position: relative;
+    }
+
+    #intBut {
         width: 100%;
-        height: 275px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        z-index: 99;
+    }
+
+    #intBut > li {
+        width: 50px;
+        height: auto;
         float: left;
-        margin-top: 30px;
+    }
+
+    #intBut > li > img {
+        width: 70%;
+        height: auto;
+        float: left;
+        cursor: pointer;
+    }
+
+    #intBut > li.intRight {
+        float: right;
+    }
+
+    #topInt {
+        width: 200%;
+        height: auto;
+        float: left;
+        margin-top: 10vh;
+        padding: 50px;
+        box-sizing: border-box;
+        position: relative;
     }
 
     #topInt > li {
-        width: 80%;
-        height: 100%;
+        width: 50%;
+        height: 275px;
         float: left;
         position: relative;
     }
 
-    #topInt > .symbol {
-        width: 20%;
+    #topInt .symbol {
+        width: auto;
+        height: auto;
+        float: left;
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+
+    #topInt span {
+        font-size: 18px;
+        line-height: 27px;
     }
 
     .symbolImg {
-        width: 180px;
-        height: 180px;
+        width: 80%;
+        height: 100%;
         float: left;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    }
+
+    .symbolImg > img {
+        width: 100%;
+        height: auto;
+        float: left;
     }
 
     /*인터뷰 말풍선*/
     .intBubble,
     .intBubble2 {
-        width: 90%;
+        width: 80%;
         height: 80%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: #88b7d5;
-        border: 4px solid #88b7d5;
+        background: white;
+        border: 10px solid #88b7d5;
         padding: 20px;
         box-sizing: border-box;
         border-radius: 10px;
-    }
-
-    .intBubble:before,
-    .intBubble2:before {
-        content: ' ';
-        width: 98%;
-        height: 95%;
-        background-color: white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: -1;
-        border-radius: 10px;
-    }
-
-    .intBubble:after {
-        left: 100%;
-        top: 50%;
-        border: solid transparent;
-        content: " ";
-        border-color: rgba(0, 0, 0, 0);
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        border-left-color: #88b7d5;
-        border-width: 30px;
-        margin-top: -30px;
-    }
-
-    .intBubble2:after {
-        left: -7%;
-        top: 50%;
-        border: solid transparent;
-        content: " ";
-        border-color: rgba(0, 0, 0, 0);
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        border-right-color: #88b7d5;
-        border-width: 30px;
-        margin-top: -30px;
-    }
-
-    /*직원소개*/
-    #employee {
-        width: 100%;
-        height: 650px;
-        float: left;
-        display: flex;
-        flex-direction: column;
-        background-color: #262a33;
-    }
-
-    #employee > h3.title {
-        color: #efefef;
-    }
-
-    /*직원소개 첫번째 제안*/
-    #emlist {
-        margin-top: 40px;
-        width: 100%;
-        height: 280px;
-        float: left;
-    }
-
-    #emlist > li {
-        width: 25%;
-        height: 100%;
-        float: left;
         position: relative;
-    }
-
-    .emCir {
-        width: 255px;
-        height: 255px;
-        overflow: hidden;
-        border-radius: 125px;
-        border: 1px solid black;
-        box-sizing: border-box;
-        float: left;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        cursor: pointer;
-    }
-
-    .closeCir {
-        width: 50%;
-        height: 100%;
-        float: left;
-        position: absolute;
-        top: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-
-
-    .c_left {
-        left: 0;
-    }
-
-    .c_right {
-        right: 0;
-    }
-
-    /*직원 소개 두번째 제안*/
-    #emplist {
-        width: 1070px;
-        height: 320px;
-        margin: 0 auto;
-        margin-top: 60px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #emplist > li {
-        width: 230px;
-        height: 100%;
-        border: 1px solid #efefef;
-        box-sizing: border-box;
-        background-color: white;
-    }
-
-    .empImg {
-        width: 100%;
-        height: 140px;
-        float: left;
-        background-color: #efefef;
-    }
-
-    .empImg > img {
-        width: 100%;
-        height: auto;
         float: left;
     }
+}
 
-    .empText {
-        width: 100%;
-        height: 180px;
-        padding: 10px;
-        box-sizing: border-box;
-        float: left;
-    }
+.intBubble:after {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    border-color: rgba(0, 0, 0, 0);
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-left-color: #88b7d5;
+    border-width: 30px;
+    margin-top: -30px;
+}
 
-    .empText > p,
-    .empText > h3 {
-        width: 100%;
-        float: left;
-        margin: 0;
-        margin-bottom: 10px;
-    }
+.intBubble2:after {
+    left: -7%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    border-color: rgba(0, 0, 0, 0);
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-right-color: #88b7d5;
+    border-width: 30px;
+    margin-top: -30px;
+}
 
-    .major {
-        font-size: 15px;
-    }
+/*직원소개*/
+#employee {
+    width: 100%;
+    height: 650px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    background-color: #262a33;
+}
 
-    .emName {
-        font-size: 20px;
-    }
+#employee > h3.title {
+    color: #efefef;
+}
 
-    .emInt {
-        font-size: 15px;
-    }
+/*직원소개 첫번째 제안*/
+#emlist {
+    margin-top: 40px;
+    width: 100%;
+    height: 280px;
+    float: left;
+}
 
-    #link {
-        width: 100%;
-        height: auto;
-        float: left;
-    }
+#emlist > li {
+    width: 25%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
 
-    /*링크의 첫 번재 제안*/
-    #linkIcon {
-        width: 100%;
-        height: 100%;
-        float: left;
-        margin-top: 10px;
-    }
+.emCir {
+    width: 255px;
+    height: 255px;
+    overflow: hidden;
+    border-radius: 125px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    cursor: pointer;
+}
 
-    #linkIcon > li {
-        width: 100px;
-        height: 100px;
-        margin-right: 450px;
-        float: left;
-        position: relative;
-        cursor: pointer;
-    }
+.closeCir {
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
-    .bubble {
-        width: 310px;
-        height: 100px;
-        background-color: pink;
-        position: absolute;
-        top: 0;
-        left: 100px;
-        border-radius: 10px;
-        padding: 10px;
-        box-sizing: border-box;
-        display: none;
-    }
 
-    .bubble > p {
-        margin-bottom: 0;
-    }
+.c_left {
+    left: 0;
+}
 
-    .bubble::after {
-        position: absolute;
-        top: 50%;
-        left: -20px;
-        content: '';
-        border-left: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        border-top: 10px solid transparent;
-        border-right: 10px solid pink;
-        box-sizing: border-box;
-    }
+.c_right {
+    right: 0;
+}
 
-    .bubble.right {
-        left: -310px;
-    }
+/*직원 소개 두번째 제안*/
+#emplist {
+    width: 1070px;
+    height: 320px;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
 
-    .bubble.right::after {
-        position: absolute;
-        top: 50%;
-        left: 100%;
-        content: '';
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        border-top: 10px solid transparent;
-        border-left: 10px solid pink;
-        box-sizing: border-box;
-    }
+#emplist > li {
+    width: 230px;
+    height: 100%;
+    border: 1px solid #efefef;
+    box-sizing: border-box;
+    background-color: white;
+}
 
-    #linkIcon > li:last-child {
-        margin-right: 0;
-    }
+.empImg {
+    width: 100%;
+    height: 140px;
+    float: left;
+    background-color: #efefef;
+}
 
-    #linkIcon > li > img {
-        width: 100%;
-        height: auto;
-        float: left;
-    }
+.empImg > img {
+    width: 100%;
+    height: auto;
+    float: left;
+}
 
-    /*링크 두번째 제안*/
-    #linkWra {
-        width: 100%;
-        height: 200px;
-        display: flex;
-        justify-content: space-around;
-        margin-top: 50px;
-    }
+.empText {
+    width: 100%;
+    height: 180px;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+}
 
-    #linkWra > li {
-        width: 145px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.empText > p,
+.empText > h3 {
+    width: 100%;
+    float: left;
+    margin: 0;
+    margin-bottom: 10px;
+}
 
-    .linkImg {
-        width: 100%;
-        height: 110px;
-    }
+.major {
+    font-size: 15px;
+}
 
-    #linkWra > li > p {
-        height: 30px;
-        line-height: 30px;
-        margin-top: 5px;
-        margin-bottom: 0;
-        font-size: 20px;
-    }
+.emName {
+    font-size: 20px;
+}
 
-    .linkImg > img {
-        display: block;
-        margin: 0 auto;
-        margin-top: 5px;
-    }
+.emInt {
+    font-size: 15px;
+}
 
-    section {
-        width: 100%;
-        /*height: 800px;*/
-        height: 90vh;
-        float: left;
-    }
+#link {
+    width: 100%;
+    height: auto;
+    float: left;
+}
 
-    /*각 섹션 타이틀*/
-    h3.title {
-        width: 100%;
-        height: auto;
-        text-align: center;
-        float: left;
-        margin-top: 110px;
-        font-size: 30px;
-        font-weight: 400;
-    }
+/*링크의 첫 번재 제안*/
+#linkIcon {
+    width: 100%;
+    height: 100%;
+    float: left;
+    margin-top: 10px;
+}
 
-    /*footer*/
-    footer {
-        width: 100%;
-        height: 260px;
-        background-color: #333;
-        float: left;
-    }
+#linkIcon > li {
+    width: 100px;
+    height: 100px;
+    margin-right: 450px;
+    float: left;
+    position: relative;
+    cursor: pointer;
+}
 
-    #foot {
-        width: 100%;
-        height: 260px;
-        float: left;
-        padding-top: 30px;
-        box-sizing: border-box;
-    }
+.bubble {
+    width: 310px;
+    height: 100px;
+    background-color: pink;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: none;
+}
 
-    /*풋터의 글자색*/
-    #foot * {
-        color: white;
-    }
+.bubble > p {
+    margin-bottom: 0;
+}
 
-    #footSide {
-        width: 400px;
-        height: 30px;
-        float: left;
-        line-height: 30px;
-    }
+.bubble::after {
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    content: '';
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 10px solid pink;
+    box-sizing: border-box;
+}
 
-    #footSide > li {
-        width: auto;
-        height: 30px;
-        float: left;
-        margin-right: 20px;
-    }
+.bubble.right {
+    left: -310px;
+}
 
-    #footSide > li > a {
-        display: block;
-        width: 100%;
-        text-align: left;
-        line-height: 30px;
-        float: left;
-    }
+.bubble.right::after {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    content: '';
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-left: 10px solid pink;
+    box-sizing: border-box;
+}
 
-    address {
-        display: block;
-        margin-top: 30px;
-        font-style: normal;
-        width: 100%;
-        float: left;
-    }
+#linkIcon > li:last-child {
+    margin-right: 0;
+}
 
-    #fotImg {
-        width: 120px;
-        height: 48px;
-        margin-top: 30px;
-    }
+#linkIcon > li > img {
+    width: 100%;
+    height: auto;
+    float: left;
+}
 
-    #fotImg > img {
-        width: 100%;
-        height: auto;
-        float: left;
-    }
+/*링크 두번째 제안*/
+#linkWra {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
 
-    /*1200이상일때 보이지 말아야 할것*/
-    #nt_ham,
-    #mb_nav,
-    #mb_mask,
-    #mb_intMid,
-    #mb_graph,
-    #mb_interview,
-    #mbLink {
-        display: none;
-    }
+#linkWra > li {
+    width: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linkImg {
+    width: 100%;
+    height: 110px;
+}
+
+#linkWra > li > p {
+    height: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.linkImg > img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+
+section {
+    width: 100%;
+    /*height: 800px;*/
+    height: 90vh;
+    float: left;
+}
+
+/*각 섹션 타이틀*/
+h3.title {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    float: left;
+    margin-top: 110px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+/*footer*/
+footer {
+    width: 100%;
+    height: 260px;
+    background-color: #333;
+    float: left;
+}
+
+#foot {
+    width: 100%;
+    height: 260px;
+    float: left;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+/*풋터의 글자색*/
+#foot * {
+    color: white;
+}
+
+#footSide {
+    width: 400px;
+    height: 30px;
+    float: left;
+    line-height: 30px;
+}
+
+#footSide > li {
+    width: auto;
+    height: 30px;
+    float: left;
+    margin-right: 20px;
+}
+
+#footSide > li > a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    line-height: 30px;
+    float: left;
+}
+
+address {
+    display: block;
+    margin-top: 30px;
+    font-style: normal;
+    width: 100%;
+    float: left;
+}
+
+#fotImg {
+    width: 120px;
+    height: 48px;
+    margin-top: 30px;
+}
+
+#fotImg > img {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+/*1200이상일때 보이지 말아야 할것*/
+#nt_ham,
+#mb_nav,
+#mb_mask,
+#mb_intMid,
+#mb_graph,
+#mb_interview,
+#mbLink {
+    display: none;
+}
 }
 
 @media all and (max-width:1209px) and (min-width:701px) {
@@ -1659,6 +1717,13 @@ img {
         float: left;
     }
 
+    .mb_mark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     .swiper-container {
         width: 100%;
         height: 100%;
@@ -1724,7 +1789,6 @@ img {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        ;
         box-sizing: border-box;
     }
 

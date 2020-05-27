@@ -9,9 +9,6 @@ $(document).ready(() => {
     let eh = $("#employee").height();
     let hb = $('html,body');
     /*네비 제이쿼리*/
-    $('#nav>li').click(function (e) {
-        e.preventDefault();
-    })
     $('#showForm').click(function () {
         $('#form').fadeToggle()
     })
@@ -19,6 +16,38 @@ $(document).ready(() => {
         $('body,html').animate({
             scrollTop: 0
         })
+    })
+
+    //퀵버튼 제이쿼리
+    let plus = true;
+    $('#plus').click(function () {
+        if (plus) {
+            $('#alwaysDis').animate({
+                height: 345
+            });
+            $('#alwaysDis > li').animate({
+                marginTop: '15px'
+            }, 500)
+            $('#alwaysDis').append($(this))
+        } else {
+            $('#alwaysDis').animate({
+                height: 50
+            });
+            $('#alwaysDis > li').animate({
+                marginTop: '0'
+            }, 500)
+            $('#alwaysDis').prepend($(this))
+        }
+        plus = !plus;
+    })
+    $('#scroll').click(function () {
+        $('html,body').animate({
+            scrollTop: bh
+        });
+    })
+    //폼 화면에서의 제이쿼리
+    $("#close").click(function () {
+        $('#form').fadeToggle()
     })
     /*배너 제이쿼리*/
     let ww = $(window).width();
@@ -44,7 +73,6 @@ $(document).ready(() => {
     })
     $(window).scroll(function () {
         wst = $(window).scrollTop();
-        console.log("scrt" + wst)
         ww = $(window).width();
         if (ww >= 1200) {
             if (wst == 0) {
@@ -54,101 +82,13 @@ $(document).ready(() => {
             }
         }
     })
-    /*배너의 크기 변화*/
-    $('.banner1But').click(function () {
-        $('#mask').addClass('one');
-        $('#banWrap').addClass('one');
-        $('#maskMark').addClass('one');
-        $('#scroll').css({
-            top: '-150px',
-            opacity: '0.7'
-        })
-        bh = $("#ban").height() + 80;
-    });
-    $('.banner2But').click(function () {
-        $('#mask').removeClass('one');
-        $('#banWrap').removeClass('one');
-        $('#maskMark').removeClass('one');
-        bh = $("#ban").height() + 80;
-        $('#scroll').css({
-            top: '0',
-            opacity: '1'
-        })
-    });
-    $('#scroll').click(function () {
-        $('html,body').animate({
-            scrollTop: bh
-        });
-        console.log(bh)
-    })
-    //폼 화면에서의 제이쿼리
-    $("#close").click(function () {
-        $('#form').fadeToggle()
-    })
-    //인터뷰 제이쿼리
-    $('.intRight').click(function(){
-        $('#topInt').animate({
-            left:'-1'*$('#topInt').width()*0.5
-        })
-    })
-    $('.intLeft').click(function(){
-        $('#topInt').animate({
-            left:0
-        })
-    })
-    //그래프 제이쿼리
-    /*$('#canvas').mouseenter(() => {
-        $('#arrow').animate({
-            top: '90%'
-        });
-        $('#arrow2').animate({
-            top: '60%'
-        });
-        $('#arrow3').animate({
-            top: '40%'
-        }, function () {
-            $('#co').animateNumber({
-                number: 100
-            })
-        });
-
-    });
-    $('#canvas').mouseleave(() => {
-        $('#arrow').animate({
-            top: '100%'
-        });
-        $('#arrow2').animate({
-            top: '100%'
-        });
-        $('#arrow3').animate({
-            top: '100%'
-        });
-        $('#co').text(0)
-    });*/
-    //직원 제이쿼라
-    /*$('.emCir').mouseenter(function () {
-        $(this).find('.c_left').animate({
-            left: '-51%'
-        });
-        $(this).find('.c_right').animate({
-            right: '-51%'
-        });
-    });
-    $('.emCir').mouseleave(function () {
-        $('.c_left').stop().animate({
-            left: 0
-        });
-        $('.c_right').stop().animate({
-            right: 0
-        })
-    });*/
-    //링크 제이쿼리
-    $('#linkIcon>li').mouseenter(function () {
-        $(this).find('.bubble').fadeIn()
-    });
-    $('#linkIcon>li').mouseleave(function () {
-        $('.bubble').fadeOut()
-    });
+    //브랜드 리스트 제이쿼리
+    for (let i = 1; i <= 59; i++) {
+        if(i<10){   
+            i='0'+i;
+        }
+        $('#listImg').append(`<li><img src="img/list/list_${i}.gif"></li>`);
+    }
     //모바일 제이쿼리
     //메뉴
     $('#nt_ham').click(function () {

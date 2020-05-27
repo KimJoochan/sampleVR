@@ -25,14 +25,14 @@
 </head>
 
 <body>
-    <div id="alwaysTop"><img src="img/up.png"></div>
+    <ul id="alwaysDis">
+        <li id="plus"><img src="img/add.png"></li>
+        <li id="alwaysTop"><img src="img/up.png"></li>
+        <li><img src="img/kakao.png"></li>
+        <li><img src="img/blog.png"></li>
+        <li id="showForm"><img src="img/write.png"></li>
+    </ul>
     <header>
-        <ul style="position: absolute;top: 0;
-           left: 0;">
-            <li><button class="banner1But">banner1</button></li>
-            <li><button class="banner2But">banner2</button></li>
-        </ul>
-
         <div class="wrap">
             <nav>
                 <h1 id="logo"><img src="img/logo.png" alt="logo"></h1>
@@ -40,13 +40,7 @@
                 <ul id="nav" class="nt_display">
                     <li><a href="#">인사말</a></li>
                     <li><a href="#">부릉이란</a></li>
-                    <li><a href="#">인터뷰</a></li>
-                    <li><a href="#">직원</a></li>
-                    <li><a href="#">링크</a></li>
-                    <li id="showForm"><a href="#">문의하기</a></li>
                 </ul>
-
-
                 <ul id="mb_nav">
                     <li><a href="#">인사말</a></li>
                     <li><a href="#">부릉이란</a></li>
@@ -106,6 +100,8 @@
         <div id="mask" class="nt_display">
             <div id="maskMark">
                 <img src="img/banMark.png">
+                <h3 class="banTitle">상점주를 위한
+                    <span>프리미엄 배송서비스</span></h3>
                 <div id="butWrap">
                     <button class="banBut inverted primary ui labeled icon button" id="b_left">
                         <i class="left arrow icon"></i>
@@ -125,8 +121,11 @@
         </div>
         <div id="mb_mask">
             <div class="swiper-container">
+                <h3 class="banTitle">상점주를 위한
+                    <span>프리미엄 배송서비스</span></h3>
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="img/mbcity1.gif">
+                    <div class="swiper-slide">
+                        <img class="mb_gray" src="img/mbcity1.gif">
                         <img src="img/banMark.png" class="mb_mark"></div>
                     <div class="swiper-slide"><img src="img/mbcity2.gif"><img src="img/banMark.png" class="mb_mark"></div>
                     <div class="swiper-slide"><img src="img/mbcity3.gif"><img src="img/banMark.png" class="mb_mark"></div>
@@ -197,52 +196,60 @@
         </div>
     </section>
     <section id="graph">
-        <h3 class="title">부릉이란</h3>
+        <h3 class="title">부릉의 효과</h3>
         <div class="wrap">
             <ul id="topGraph" class="nt_display">
-                <li>
-                    <div id="saveChart" class="graph_com"></div>
-                </li>
-                <li>
-                    <div id="chartContainer" class="graph_com"></div>
-                </li>
-                <li>
-                    <h3 id="graTitle">전체 이용자 수 증가</h3>
+                <li class="area graph">
+                    <h3 class="spatitle">전체 이용자 수 증가</h3>
                     <img src="img/userIncrease.png">
                 </li>
+                <li>
+                    <ul class="space">
+                        <li><img src="img/dow.png"></li>
+                        <li>
+                            <h3 class="spatitle">절세효과</h3>
+                            <p>월 가맹비와 배송비에 대한 세금계산서를발행함으로써 사업소득세 절감,부가가치세 환급을 통해 최대 25%의 비용 절감 효과를 얻을 수 있습니다.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="space">
+                        <li><img src="img/oneclick4.png"></li>
+                        <li>
+                            <h3 class="spatitle">부릉원클릭</h3>
+                            <p>배달앱에서 주문이 들어오면 주소 전화번호 등을 따로 입력할 필요 없이 원클릭으로 배송신청이 가능합니다.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="area list">
+                    <h3 class="lietTitle">수 많은 <span>파트너사</span>들이 <span>부릉</span>과 함께하고 있습니다.</h3>
+                    <p>부릉은 국내 최다 프랜차이즈 업체의 상품을 배달하는 믿을 수 있는 배달대행 서비스입니다.</p>
+                    <ul id="listImg">
+
+                    </ul>
+                </li>
             </ul>
-            <ul id="botGraph" class="nt_display">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+
             <ul id="mb_graph">
-                <li>
-                    <div id="chartContainer_1" class="mb_graph_com"></div>
-                </li>
-                <li>
-                    <div id="saveChart_1" class="mb_graph_com"></div>
-                </li>
+
                 <li>
                     <p class="mb_sub_title">사용자 증가</p>
                     <img src="img/userIncrease.png">
                 </li>
-                <li></li>
             </ul>
         </div>
     </section>
-    <section id="interview">
+    <section id="interview" style="display: none;">
         <h3 class="title">부산 구별 인터뷰</h3>
         <div class="wrap">
-           <ul id="intBut">
-               <li class="intLeft">
-                   <img src="img/arrow1.png">
-               </li>
-               <li class="intRight">
-                   <img src="img/arrow2.png">
-               </li>
-           </ul>
+            <ul id="intBut">
+                <li class="intLeft">
+                    <img src="img/arrow1.png">
+                </li>
+                <li class="intRight">
+                    <img src="img/arrow2.png">
+                </li>
+            </ul>
             <ul id="topInt" class="nt_display">
                 <li>
                     <div class="intBubble"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </span></div>
@@ -283,7 +290,7 @@
             </div>
         </div>
     </section>
-    <section id="employee">
+    <section id="employee" style="display: none;">
         <h3 class="title">직원들</h3>
         <ul id="emplist">
             <li>
@@ -377,7 +384,7 @@
             </ul>
         </div>-->
     </section>
-    <section id="link">
+    <section id="link" style="display: none;">
         <div class="wrap">
             <ul id="linkWra" class="nt_display">
                 <li>

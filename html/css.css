@@ -624,125 +624,65 @@ img {
 
     /*구별 인터뷰*/
     #interview {
-        height: 100vh;
-        background: url(img/pattern.png);
-
+        height: 70vh;
     }
-
-    #interview .wrap {
-        overflow: hidden;
-        position: relative;
+    #interview .title{
+        margin-bottom: 30px;
     }
-
-    #intBut {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        z-index: 99;
-    }
-
-    #intBut > li {
-        width: 50px;
-        height: auto;
-        float: left;
-    }
-
-    #intBut > li > img {
-        width: 70%;
-        height: auto;
-        float: left;
-        cursor: pointer;
-    }
-
-    #intBut > li.intRight {
-        float: right;
-    }
-
-    #topInt {
-        width: 200%;
-        height: auto;
-        float: left;
-        margin-top: 10vh;
-        padding: 50px;
-        box-sizing: border-box;
-        position: relative;
-    }
-
-    #topInt > li {
+    #tab>a.item{
         width: 50%;
-        height: 275px;
+        display: block;
+        text-align: center;
+    }
+    .intSpace{
+        height: 400px;
+    }
+    .slice{
+        width: 100%;
+        height: 100%;
         float: left;
         position: relative;
     }
-
-    #topInt .symbol {
-        width: auto;
-        height: auto;
-        float: left;
-        margin-left: 20px;
-        margin-top: 40px;
-    }
-
-    #topInt span {
-        font-size: 18px;
-        line-height: 27px;
-    }
-
-    .symbolImg {
-        width: 80%;
+    .slice>li{
+        width: 30%;
         height: 100%;
         float: left;
     }
-
-    .symbolImg > img {
-        width: 100%;
-        height: auto;
-        float: left;
-    }
-
-    /*인터뷰 말풍선*/
-    .intBubble,
-    .intBubble2 {
-        width: 80%;
-        height: 80%;
-        background: white;
-        border: 10px solid #88b7d5;
-        padding: 20px;
+    .slice>li:first-child{
+        width: 70%;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 24px;
+        border-right: 1px solid #efefef;
         box-sizing: border-box;
-        border-radius: 10px;
+    }
+    .ui.header.intTit{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        font-size: 24px;
+        font-weight: 300;
+        color: darkcyan;
+    }
+    .host{
+        width: 140px;
+        height: 60px;
+        text-align: center;
+        padding: 10px 30px;
+        box-sizing: border-box;
+        background-color: #2ba577;
+        border-radius: 30px;
+        color: white;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        z-index: 9;
+    }
+    #intWrap{
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
         position: relative;
-        float: left;
-    }
-
-    .intBubble:after {
-        left: 100%;
-        top: 50%;
-        border: solid transparent;
-        content: " ";
-        border-color: rgba(0, 0, 0, 0);
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        border-left-color: #88b7d5;
-        border-width: 30px;
-        margin-top: -30px;
-    }
-
-    .intBubble2:after {
-        left: -7%;
-        top: 50%;
-        border: solid transparent;
-        content: " ";
-        border-color: rgba(0, 0, 0, 0);
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        border-right-color: #88b7d5;
-        border-width: 30px;
-        margin-top: -30px;
     }
 
     /*직원소개*/

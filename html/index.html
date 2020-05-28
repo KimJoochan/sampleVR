@@ -198,7 +198,7 @@
     <section id="graph">
         <h3 class="title">부릉의 효과</h3>
         <div class="wrap">
-            <ul id="topGraph"  class="nt_display">
+            <ul id="topGraph" class="nt_display">
                 <li class="area graph">
                     <h3 class="spatitle">전체 이용자 수 증가</h3>
                     <img src="img/userIncrease.png">
@@ -231,56 +231,35 @@
             </ul>
         </div>
     </section>
-    <section id="interview" style="display: none;">
-        <h3 class="title">부산 구별 인터뷰</h3>
+    <section id="interview" class="nt_display">
         <div class="wrap">
-            <ul id="intBut">
-                <li class="intLeft">
-                    <img src="img/arrow1.png">
-                </li>
-                <li class="intRight">
-                    <img src="img/arrow2.png">
-                </li>
-            </ul>
-            <ul id="topInt" class="nt_display">
-                <li>
-                    <div class="intBubble"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </span></div>
-                    <div class="symbol">
-                        <div class="symbolImg">
-                            <img src="img/symbol1.png">
-                        </div>
+           <h3 class="title">주점주의 인터뷰</h3>
+            <div id="intWrap">
+                <div class="ui top attached tabular menu" id="tab">
+                    <a class="item active" data-tab="first">Text</a>
+                    <a class="item" data-tab="second">Video</a>
+                </div>
+                <p class="host">버거킹 주점<br>홍길동</p>
+                <div class="ui bottom attached tab segment active intSpace" data-tab="first">
+                    <ul class="slice">
+                        <li>
+                        <h3 class="ui header intTit">"친절도가 좋았어요"</h3> dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                        
+                        </li>
+                        <li>2</li>
+                    </ul>
+                </div>
+                <div class="ui bottom attached tab segment intSpace" data-tab="second">
+                    <div class="ui bottom attached loading tab segment">
+                        <p></p>
+                        <p></p>
                     </div>
-                </li>
-                <li>
-                    <div class="intBubble"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </span></div>
-                    <div class="symbol">
-                        <div class="symbolImg">
-                            <img src="img/symbol2.png">
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <div id="mb_interview">
-                <ul id="mb_pag">
-                    <li class="on">1</li>
-                    <li>2</li>
-                </ul>
-                <ul id="mb_int_wrap">
-                    <li>
-                        <div class="mb_int_bub">
-                            부산진구 인터뷰 :<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </span>
-                            <img src="img/symbol1.png">
-                        </div>
-                    </li>
-                    <li>
-                        <div class="mb_int_bub">
-                            동래구 인터뷰 :<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </span>
-                            <img src="img/symbol2.png">
-                        </div>
-                    </li>
-                </ul>
+                </div>
             </div>
         </div>
+        <script>
+            $('.menu .item').tab();
+        </script>
     </section>
     <section id="employee" style="display: none;">
         <h3 class="title">직원들</h3>
@@ -402,27 +381,6 @@
                     <p>www.naver.com</p>
                 </li>
             </ul>
-            <!--<ul id="linkIcon" class="nt_display">
-                <li>
-                    <img src="img/kakao.png" alt="phone">
-                    <div class="bubble">
-                        <p>카카오톡 주소 및 링크</p><a href="">카카오톡 링크 연결하기</a>
-                    </div>
-                </li>
-                <li>
-                    <img src="img/phone.png" alt="phone">
-                    <div class="bubble">
-                        <p>전화번호 : </p>
-                        <a href="tel:010-6727-0240">010-6727-0240</a>
-                    </div>
-                </li>
-                <li>
-                    <img src="img/email.png" alt="phone">
-                    <div class="bubble right">
-                        <p>이메일 주소 : </p><a href="mailto:jc5240240@naver.com">jc5240240@naver.com</a>
-                    </div>
-                </li>
-            </ul>-->
             <ul id="mbLink" class="mblinkBut">
                 <li>
                     <img src="img/kakao.png" alt="kakao">
@@ -485,7 +443,6 @@
                         </div>
                         <div class="actions">
                             <div class="ui approve button mbtn" data-clipboard-target="#kaCopied">copy</div>
-
                             <div class="ui cancel button">Cancel</div>
                         </div>
                     </div>

@@ -1077,6 +1077,120 @@ img {
         display: none;
     }
 
+    /*부릉 그래프*/
+    #topGraph {
+        width: 100%;
+        height: auto;
+        float: left;
+        display: flex;
+        margin-top: 30px;
+        /* align-items: center; */
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    #topGraph > .area {
+        flex-basis: 70%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #topGraph > .area.list {
+        flex-basis: 100%;
+    }
+
+    .area.graph > img {
+        width: 50%;
+        height: auto;
+        float: left;
+    }
+
+    #topGraph > li {
+        width: 100%;
+        height: auto;
+        float: left;
+        display: flex;
+        justify-content: center;
+    }
+
+    .space {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: rgb(238, 238, 238) 0px 0px 15px 3px;
+    }
+
+    .space > li {
+        width: 100%;
+        height: auto;
+    }
+
+    .space > li > img {
+        width: 100%;
+        height: auto;
+        float: left;
+        margin-top: 20px;
+    }
+
+    .space > li:nth-child(2) {
+        flex-grow: 1;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .spatitle {
+        font-size: 1.5rem;
+    }
+
+    h3.lietTitle {
+        font-size: 1.5rem;
+        margin-top: 30px;
+        font-weight: 600;
+    }
+
+    .lietTitle > span {
+        color: rgb(5, 205, 130);
+    }
+
+    .space p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    #listImg {
+        width: 130%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #listImg > li {
+        width: 12.5%;
+        height: auto;
+        text-align: center;
+        padding: 0.5rem;
+        box-sizing: border-box;
+    }
+
+
+    #topGraph > li:first-child {
+        border: none;
+    }
+
+    #topGraph > li {
+        flex-basis: 40%;
+        height: 400px;
+        margin-bottom: 30px;
+    }
+
+    /*부릉 그래프*/
     .wrap {
         width: 100%;
         height: auto;
@@ -1162,22 +1276,22 @@ img {
 
     .banTitle {
         width: 100%;
-        font-size: 50px;
+        font-size: 3rem;
         text-align: center;
         color: white;
         height: 70px;
-        line-height: 70px;
         font-weight: 600;
         position: absolute;
         font-weight: 500;
         text-shadow: 1px 1px 1px #333;
-        top: 50%;
+        top: 1vh;
         left: 50%;
         z-index: 99;
-        transform: translate(-50%, -25vh);
+        transform: translateX(-50%);
     }
 
     .banTitle > span {
+        display: block;
         color: aquamarine;
     }
 
@@ -1345,50 +1459,6 @@ img {
         font-size: 22px;
         overflow-y: scroll;
     }*/
-
-    /*부릉 그래프*/
-    #mb_graph {
-        width: 100%;
-        height: 70vw;
-        float: left;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #mb_graph > li {
-        width: 50%;
-        height: 50%;
-        float: left;
-        border: 1px solid cyan;
-        box-sizing: border-box;
-        position: relative;
-    }
-
-    .mb_sub_title {
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        margin: 0;
-    }
-
-    #mb_graph > li > img {
-        width: 75%;
-        height: auto;
-        float: left;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .mb_graph_com {
-        width: 90%;
-        height: 100%;
-        margin: 0 auto;
-    }
-
     /*테블릿 인터뷰*/
     #mb_interview {
         width: 100%;
@@ -1778,7 +1848,6 @@ img {
         color: #efefef;
     }
 
-
     /*모바일 배너 스와이퍼*/
 
     #ban {
@@ -1821,6 +1890,26 @@ img {
         justify-content: center;
 
         align-items: center;
+    }
+
+    .banTitle {
+        width: 100%;
+        font-size: 5.5vw;
+        text-align: center;
+        color: white;
+        height: 70px;
+        font-weight: 500;
+        position: absolute;
+        text-shadow: 1px 1px 1px #333;
+        top: 1vh;
+        left: 50%;
+        z-index: 99;
+        transform: translateX(-50%);
+    }
+
+    .banTitle > span {
+        display: block;
+        color: aquamarine;
     }
 
     /*모바일 자기 소개*/
@@ -1950,6 +2039,125 @@ img {
         box-sizing: border-box;
         text-align: left;
         font-size: 20px;
+    }
+
+    /*부릉 그래프*/
+    #topGraph {
+        width: 100%;
+        height: auto;
+        float: left;
+        display: flex;
+        margin-top: 30px;
+        /* align-items: center; */
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    #topGraph > .area {
+        flex-basis: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #topGraph > .area.list {
+        flex-basis: 100%;
+    }
+
+    .area.graph > img {
+        width: 50%;
+        height: auto;
+        float: left;
+    }
+
+    #topGraph > li {
+        width: 100%;
+        height: auto;
+        float: left;
+        display: flex;
+        justify-content: center;
+    }
+
+    .space {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: rgb(238, 238, 238) 0px 0px 15px 3px;
+    }
+
+    .space > li {
+        width: 100%;
+        height: auto;
+    }
+
+    .space > li > img {
+        width: 100%;
+        height: auto;
+        float: left;
+        margin-top: 20px;
+    }
+
+    .space > li:nth-child(2) {
+        flex-grow: 1;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .spatitle {
+        font-size: 1.5rem;
+    }
+
+    .area.list > p {
+        text-align: center;
+        padding: 0 5rem;
+        box-sizing: border-box;
+    }
+
+    .area.list > .lietTitle {
+        font-size: 1.5rem;
+        margin-top: 30px;
+        font-weight: 600;
+    }
+
+    .lietTitle > span {
+        color: rgb(5, 205, 130);
+    }
+
+    .space p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    #listImg {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #listImg > li {
+        flex-grow: 1;
+        height: auto;
+        text-align: center;
+        padding: 0.5rem;
+        box-sizing: border-box;
+    }
+
+
+    #topGraph > li:first-child {
+        border: none;
+    }
+
+    #topGraph > li {
+        flex-basis: 70%;
+        height: 400px;
+        margin-bottom: 30px;
     }
 
     /*부릉 그래프*/

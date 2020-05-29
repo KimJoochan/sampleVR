@@ -77,12 +77,6 @@ img {
         float: left;
     }
 
-    #logo > img {
-        width: 100%;
-        height: auto;
-        float: left;
-    }
-
     #nav {
         overflow: hidden;
         height: 60px;
@@ -546,12 +540,6 @@ img {
         margin-top: 20px;
     }
 
-    .space > li:nth-child(2) {
-        flex-grow: 1;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
     .spatitle {
         font-size: 1.5rem;
     }
@@ -624,31 +612,43 @@ img {
 
     /*구별 인터뷰*/
     #interview {
-        height: 70vh;
-    }
-    #interview .title{
+        height: 85vh;
         margin-bottom: 30px;
     }
-    #tab>a.item{
+
+    #interview video {
+        width: 100%;
+        height: auto;
+    }
+
+    #interview .title {
+        margin-bottom: 30px;
+    }
+
+    #tab > a.item {
         width: 50%;
         display: block;
         text-align: center;
     }
-    .intSpace{
-        height: 400px;
+
+    .intSpace {
+        height: 570px;
     }
-    .slice{
+
+    .slice {
         width: 100%;
         height: 100%;
         float: left;
         position: relative;
     }
-    .slice>li{
+
+    .slice > li {
         width: 30%;
         height: 100%;
         float: left;
     }
-    .slice>li:first-child{
+
+    .slice > li:first-child {
         width: 70%;
         padding: 10px;
         font-size: 16px;
@@ -656,7 +656,8 @@ img {
         border-right: 1px solid #efefef;
         box-sizing: border-box;
     }
-    .ui.header.intTit{
+
+    .ui.header.intTit {
         width: 100%;
         height: 50px;
         line-height: 50px;
@@ -664,21 +665,23 @@ img {
         font-weight: 300;
         color: darkcyan;
     }
-    .host{
+
+    .host {
         width: 140px;
         height: 60px;
         text-align: center;
         padding: 10px 30px;
         box-sizing: border-box;
-        background-color: #2ba577;
-        border-radius: 30px;
-        color: white;
+        background-color: #b5cc18;
+        color: #fff;
+        border-radius: 15px;
         position: absolute;
-        bottom: 30px;
+        bottom: 0;
         left: 50%;
         z-index: 9;
     }
-    #intWrap{
+
+    #intWrap {
         width: 80%;
         height: auto;
         margin: 0 auto;
@@ -830,51 +833,6 @@ img {
         cursor: pointer;
     }
 
-    .bubble {
-        width: 310px;
-        height: 100px;
-        background-color: pink;
-        position: absolute;
-        top: 0;
-        left: 100px;
-        border-radius: 10px;
-        padding: 10px;
-        box-sizing: border-box;
-        display: none;
-    }
-
-    .bubble > p {
-        margin-bottom: 0;
-    }
-
-    .bubble::after {
-        position: absolute;
-        top: 50%;
-        left: -20px;
-        content: '';
-        border-left: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        border-top: 10px solid transparent;
-        border-right: 10px solid pink;
-        box-sizing: border-box;
-    }
-
-    .bubble.right {
-        left: -310px;
-    }
-
-    .bubble.right::after {
-        position: absolute;
-        top: 50%;
-        left: 100%;
-        content: '';
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        border-top: 10px solid transparent;
-        border-left: 10px solid pink;
-        box-sizing: border-box;
-    }
-
     #linkIcon > li:last-child {
         margin-right: 0;
     }
@@ -1013,49 +971,20 @@ img {
 }
 
 @media all and (max-width:1209px) and (min-width:701px) {
-    .nt_display {
-        display: none;
-    }
-
-    /*부릉 그래프*/
-    #topGraph {
-        width: 100%;
-        height: auto;
-        float: left;
-        display: flex;
-        margin-top: 30px;
-        /* align-items: center; */
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    #topGraph > .area {
-        flex-basis: 70%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #topGraph > .area.list {
-        flex-basis: 100%;
-    }
-
     .area.graph > img {
         width: 50%;
         height: auto;
         float: left;
     }
-
     #topGraph > li {
         width: 100%;
-        height: auto;
         float: left;
         display: flex;
         justify-content: center;
+        flex-basis: 40%;
+        height: 400px;
+        margin-bottom: 30px;
     }
-
     .space {
         width: 90%;
         height: 100%;
@@ -1065,44 +994,19 @@ img {
         overflow: hidden;
         box-shadow: rgb(238, 238, 238) 0px 0px 15px 3px;
     }
-
-    .space > li {
-        width: 100%;
-        height: auto;
-    }
-
-    .space > li > img {
-        width: 100%;
-        height: auto;
-        float: left;
-        margin-top: 20px;
-    }
-
     .space > li:nth-child(2) {
         flex-grow: 1;
         padding: 10px;
         box-sizing: border-box;
     }
-
-    .spatitle {
-        font-size: 1.5rem;
-    }
-
     h3.lietTitle {
         font-size: 1.5rem;
         margin-top: 30px;
         font-weight: 600;
     }
-
     .lietTitle > span {
         color: rgb(5, 205, 130);
     }
-
-    .space p {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
     #listImg {
         width: 130%;
         height: auto;
@@ -1119,35 +1023,9 @@ img {
         box-sizing: border-box;
     }
 
-
-    #topGraph > li:first-child {
-        border: none;
-    }
-
-    #topGraph > li {
-        flex-basis: 40%;
-        height: 400px;
-        margin-bottom: 30px;
-    }
-
     /*부릉 그래프*/
-    .wrap {
-        width: 100%;
-        height: auto;
-    }
-
-    section {
-        width: 100%;
-        height: auto;
-        float: left;
-    }
-
     /*테블릿 타이틀*/
     h3.title {
-        width: 100%;
-        height: auto;
-        text-align: center;
-        margin: 15px 0;
         font-size: 30px;
     }
 
@@ -1159,19 +1037,7 @@ img {
         position: fixed;
         z-index: 999;
         background-color: #efefef;
-    }
-
-    #logo {
-        width: 120px;
-        height: auto;
-        margin: 0;
-        float: left;
-    }
-
-    #logo > img {
-        width: 100%;
-        height: auto;
-        float: left;
+        top: 0;
     }
 
     #nt_ham {
@@ -1198,95 +1064,14 @@ img {
         font-size: 20px;
         float: left;
     }
-
     /*테블릿 배너 스와이퍼*/
-
-    #ban {
-        margin-top: 48px;
-    }
-
     #mb_mask {
-        width: 100%;
         height: 60vw;
-        float: left;
-        text-align: center;
-        line-height: 800px;
-        position: relative;
     }
-
     .banTitle {
-        width: 100%;
         font-size: 3rem;
-        text-align: center;
-        color: white;
-        height: 70px;
-        font-weight: 600;
-        position: absolute;
         font-weight: 500;
-        text-shadow: 1px 1px 1px #333;
-        top: 1vh;
-        left: 50%;
-        z-index: 99;
-        transform: translateX(-50%);
     }
-
-    .banTitle > span {
-        display: block;
-        color: aquamarine;
-    }
-
-    .mb_mark {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%)
-    }
-
-    #mb_mask img {
-        width: 100%;
-        height: auto;
-        float: left;
-    }
-
-
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-    }
-
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /*테블릿 자기 소개*/
-    #mb_intMid {
-        width: 100%;
-        height: 550px;
-        float: left;
-        position: relative;
-        box-sizing: border-box;
-    }
-
-    #half {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        background-color: #292929;
-    }
-
-    #half > li {
-        flex-grow: 1;
-        flex-basis: 50%;
-        box-sizing: border-box;
-        position: relative;
-    }
-
     .intImg::before {
         content: "";
         display: block;
@@ -1312,212 +1097,7 @@ img {
         box-sizing: border-box;
     }
 
-    .intTe {
-        width: 100%;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        margin-top: 50px;
-    }
-
-    .intTe > li {
-        width: 100%;
-        height: auto;
-    }
-
-    .intTe * {
-        color: #efefef;
-        text-align: left;
-    }
-
-    .intTe h3.title {
-        width: 100%;
-        height: 50px;
-        float: left;
-        margin: 0;
-        font-size: 30px;
-        font-weight: 400;
-        position: relative;
-    }
-
-    .intTe h3.title::after {
-        content: '';
-        width: 100px;
-        height: 2px;
-        background-color: aqua;
-        position: absolute;
-        top: 50px;
-        left: 0;
-    }
-
-    .intTe > li:nth-child(2) {
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    #mb_sub_int {
-        width: 100%;
-        height: 300px;
-        overflow-y: scroll;
-        box-sizing: border-box;
-        text-align: left;
-        font-size: 20px;
-    }
-
-    /*  #mb_intMid > img {
-        display: block;
-        width: 40%;
-        height: auto;
-        margin: 0 auto;
-
-    }*/
-
-    /*타이틀*/
-    /*#mb_intMid > .mb_title {
-        width: 100%;
-        height: 60px;
-        font-size: 30px;
-        line-height: 60px;
-        text-align: center;
-        margin-top: 30px;
-    }*/
-
-    /*자세히보기*/
-    #mb_more {
-        margin: 30px auto;
-        display: block;
-    }
-
-    /*테블릿 자기 소개 글*/
-    /*#mb_sub_int {
-        width: 85%;
-        height: 200px;
-        border: 1px solid black;
-        box-sizing: border-box;
-        margin: 30px auto;
-        text-align: left;
-        font-size: 22px;
-        overflow-y: scroll;
-    }*/
-    /*테블릿 인터뷰*/
-    #mb_interview {
-        width: 100%;
-        height: 50vw;
-        float: left;
-        position: relative;
-    }
-
-    #mb_pag {
-        width: 90px;
-        height: 30px;
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        flex-direction: row;
-        z-index: 9;
-        justify-content: space-around;
-    }
-
-    #mb_pag > li {
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        line-height: 30px;
-        background-color: cadetblue;
-        text-align: center;
-        cursor: pointer;
-    }
-
-    #mb_pag > li.on {
-        background-color: aquamarine;
-    }
-
-    #mb_int_wrap {
-        width: 100%;
-        height: 100%;
-        float: left;
-        position: relative;
-    }
-
-    #mb_int_wrap > li {
-        width: 100%;
-        height: 100%;
-        float: left;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: none;
-    }
-
-    #mb_int_wrap > li:nth-child(1) {
-        display: block;
-    }
-
-    #mb_int_wrap > li > img {
-        width: 100%;
-        height: 100%;
-        float: left;
-        opacity: 0.5;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .mb_int_bub {
-        width: 90%;
-        height: 90%;
-        border: 1px solid black;
-        margin: 0 auto;
-        margin-top: 3%;
-        background-color: white;
-        padding: 20px;
-        border-radius: 20px;
-        box-sizing: border-box;
-        position: relative;
-        font-size: 24px;
-    }
-
-
-    .mb_int_bub > span {
-        font-size: 20px;
-        display: block;
-        text-align: left;
-        margin-top: 10px;
-        line-height: 25px;
-    }
-
-    .mb_int_bub > img {
-        width: 20%;
-        height: auto;
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        opacity: 0.5;
-    }
-
-    /*테블릿 직원리스트*/
-    #emlist {
-        width: 80%;
-        height: 100%;
-        margin: 0 auto;
-    }
-
-    .closeCir {
-        display: none;
-    }
-
-    #emplist {
-        flex-basis: 800px;
-        height: auto;
-        margin: 0 auto;
-        margin-top: 60px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
+    /*테블릿 직원리스트 차후에 필요시*/
     #emplist > li {
         flex-basis: 350px;
         height: auto;
@@ -1530,7 +1110,6 @@ img {
     #emplist > li:nth-child(4) {
         margin-top: 20px;
     }
-
 
     .empImg {
         width: 100%;
@@ -1573,158 +1152,12 @@ img {
     .emInt {
         font-size: 15px;
     }
-
-    /*#emlist > li {
-        width: 50%;
-        height: 100%;
-        float: left;
-        border: 1px solid cyan;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .emCir {
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-
-    .emCir > img {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-    }*/
-
-    /*테블릿 링크*/
-    #mbLink {
-        width: 80%;
-        height: auto;
-        margin: 15px auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    #mbLink > li {
-        flex-basis: 120px;
-        height: auto;
-        position: relative;
-    }
-
-    #mbLink > li > img {
-        width: 80%;
-        height: auto;
-        float: left;
-    }
-
-    .tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: black;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 0;
-
-        /* Position the tooltip */
-        position: absolute;
-        z-index: 999;
-        left: -12px;
-    }
-
-
-
-    /*테블릿 네비바에서 나오는 링크*/
-    #modalWrap {
-        width: 100%;
-        height: 50vh;
-        float: left;
-        position: relative;
-    }
-
-    #mbLinkMod {
-        width: 65%;
-        height: auto;
-        margin: 0 auto;
-    }
-
-    #mbLinkMod > li {
-        width: 23%;
-        height: auto;
-        float: left;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    #mbLinkMod > li > img {
-        width: 100%;
-        height: auto;
-        float: left;
-    }
-
-    .bubble {
-        display: none;
-    }
-
-    /*모바일 풋터*/
-    footer {
-        width: 100%;
-        height: 100px;
-        float: left;
-        background-color: pink;
-        margin-top: 10px;
-        padding-left: 20px;
-        box-sizing: border-box;
-    }
-
-    address {
-        font-size: 14px;
-        font-style: normal;
-        text-align: center;
-        margin-top: 20px;
-        position: relative;
-    }
-
-    #fotImg {
-        width: 100px;
-        height: auto;
-        margin: 0 auto;
-        margin-top: 10px;
-
-    }
-
-    #fotImg > img {
-        width: 100%;
-        height: auto;
-        float: left;
-    }
-
 }
 
 @media all and (max-width:700px) {
-    .wrap {
-        width: 100%;
-        height: auto;
-    }
-
-    section {
-        width: 100%;
-        height: auto;
-        float: left;
-    }
-
-    /*클래스이름으로 우선 1200이상에 보이는 것 삭제*/
-    .nt_display {
-        display: none;
-    }
 
     /*모바일 타이틀*/
     h3.title {
-        width: 100%;
-        height: auto;
-        text-align: center;
-        margin: 15px 0;
         font-size: 26px;
     }
 
@@ -1736,19 +1169,6 @@ img {
         position: fixed;
         z-index: 999;
         background-color: #efefef;
-    }
-
-    #logo {
-        width: 120px;
-        height: auto;
-        margin: 0;
-        float: left;
-    }
-
-    #logo > img {
-        width: 100%;
-        height: auto;
-        float: left;
     }
 
     #nt_ham {
@@ -1788,95 +1208,16 @@ img {
         color: #efefef;
     }
 
-    /*모바일 배너 스와이퍼*/
-
-    #ban {
-        margin-top: 48px;
-    }
-
     #mb_mask {
-        width: 100%;
         height: 400px;
-        float: left;
-        text-align: center;
-        line-height: 800px;
-    }
-
-    #mb_mask img {
-        width: 100%;
-        height: auto;
-        float: left;
-    }
-
-    .mb_mark {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-    }
-
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        display: flex;
-
-        justify-content: center;
-
-        align-items: center;
     }
 
     .banTitle {
-        width: 100%;
         font-size: 5.5vw;
-        text-align: center;
-        color: white;
-        height: 70px;
         font-weight: 500;
-        position: absolute;
-        text-shadow: 1px 1px 1px #333;
-        top: 1vh;
-        left: 50%;
-        z-index: 99;
-        transform: translateX(-50%);
-    }
-
-    .banTitle > span {
-        display: block;
-        color: aquamarine;
     }
 
     /*모바일 자기 소개*/
-    #mb_intMid {
-        width: 100%;
-        height: 500px;
-        float: left;
-        position: relative;
-        border: 1px solid black;
-        box-sizing: border-box;
-    }
-
-    #half {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        background-color: #292929;
-    }
-
-    #half > li {
-        flex-grow: 1;
-        flex-basis: 50%;
-        box-sizing: border-box;
-        position: relative;
-    }
-
     .intImg::before {
         content: "";
         display: block;
@@ -1886,7 +1227,6 @@ img {
         background-color: #efefef;
         top: -25px;
         left: 15px;
-
         background: url(img/sam.png) no-repeat;
         background-size: cover;
         background-position: center;
@@ -1903,56 +1243,11 @@ img {
         box-sizing: border-box;
     }
 
-    .intTe {
-        width: 100%;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        margin-top: 50px;
-    }
-
-    .intTe > li {
-        width: 100%;
-        height: auto;
-    }
-
-    .intTe * {
-        color: #efefef;
-        text-align: left;
-    }
-
-    .intTe h3.title {
-        width: 100%;
-        height: 50px;
-        float: left;
-        margin: 0;
-        font-size: 30px;
-        font-weight: 400;
-        position: relative;
-    }
-
-    .intTe h3.title::after {
-        content: '';
-        width: 100px;
-        height: 2px;
-        background-color: aqua;
-        position: absolute;
-        top: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .intTe > li:nth-child(2) {
-        padding: 3vw;
-        box-sizing: border-box;
-    }
-
     #mb_intMid > img {
         display: block;
         width: 50%;
         height: auto;
         margin: 0 auto;
-
     }
 
     /*타이틀*/
@@ -1965,59 +1260,20 @@ img {
         text-align: center;
     }
 
-    /*자세히보기*/
-    #mb_more {
-        margin: 30px auto;
-        display: block;
-    }
-
-    /*모바일 자기 소개 글*/
-    #mb_sub_int {
+    #topGraph > li {
         width: 100%;
-        height: 300px;
-        overflow-y: scroll;
-        box-sizing: border-box;
-        text-align: left;
-        font-size: 20px;
-    }
-
-    /*부릉 그래프*/
-    #topGraph {
-        width: 100%;
-        height: auto;
         float: left;
         display: flex;
-        margin-top: 30px;
-        /* align-items: center; */
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-
-    #topGraph > .area {
-        flex-basis: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #topGraph > .area.list {
-        flex-basis: 100%;
+        justify-content: center;
+        flex-basis: 70%;
+        height: 400px;
+        margin-bottom: 30px;
     }
 
     .area.graph > img {
         width: 50%;
         height: auto;
         float: left;
-    }
-
-    #topGraph > li {
-        width: 100%;
-        height: auto;
-        float: left;
-        display: flex;
-        justify-content: center;
     }
 
     .space {
@@ -2028,28 +1284,6 @@ img {
         border-radius: 30px;
         overflow: hidden;
         box-shadow: rgb(238, 238, 238) 0px 0px 15px 3px;
-    }
-
-    .space > li {
-        width: 100%;
-        height: auto;
-    }
-
-    .space > li > img {
-        width: 100%;
-        height: auto;
-        float: left;
-        margin-top: 20px;
-    }
-
-    .space > li:nth-child(2) {
-        flex-grow: 1;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    .spatitle {
-        font-size: 1.5rem;
     }
 
     .area.list > p {
@@ -2068,11 +1302,6 @@ img {
         color: rgb(5, 205, 130);
     }
 
-    .space p {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
     #listImg {
         width: 100%;
         height: auto;
@@ -2087,355 +1316,5 @@ img {
         text-align: center;
         padding: 0.5rem;
         box-sizing: border-box;
-    }
-
-
-    #topGraph > li:first-child {
-        border: none;
-    }
-
-    #topGraph > li {
-        flex-basis: 70%;
-        height: 400px;
-        margin-bottom: 30px;
-    }
-
-    /*부릉 그래프*/
-    #mb_graph {
-        width: 100%;
-        height: 70vw;
-        float: left;
-    }
-
-    #mb_graph > li {
-        width: 50%;
-        height: 50%;
-        float: left;
-        border: 1px solid cyan;
-        box-sizing: border-box;
-        position: relative;
-    }
-
-    .mb_sub_title {
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        margin: 0;
-    }
-
-    #mb_graph > li > img {
-        width: 75%;
-        height: auto;
-        float: left;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .mb_graph_com {
-        width: 90%;
-        height: 100%;
-        margin: 0 auto;
-    }
-
-    /*모바일 인터뷰*/
-    #mb_interview {
-        width: 100%;
-        height: 50vw;
-        float: left;
-        position: relative;
-    }
-
-    #mb_int_wrap {
-        width: 100%;
-        height: 100%;
-        float: left;
-        position: relative;
-    }
-
-    #mb_int_wrap > li {
-        width: 100%;
-        height: 100%;
-        float: left;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    #mb_int_wrap > li > img {
-        width: 100%;
-        height: 100%;
-        float: left;
-        opacity: 0.5;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    #mb_int_wrap span {
-        display: block;
-        font-size: 20px;
-        text-align: left;
-        line-height: 25px;
-        margin-top: 10px;
-    }
-
-    .mb_int_bub {
-        width: 90%;
-        height: 80%;
-        border: 1px solid black;
-        margin: 0 auto;
-        margin-top: 3%;
-        background-color: white;
-        padding: 20px;
-        border-radius: 20px;
-        box-sizing: border-box;
-        position: relative;
-        font-size: 24px;
-        overflow-y: scroll;
-    }
-
-    .mb_int_bub > img {
-        width: 20%;
-        height: auto;
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        opacity: 0.5;
-    }
-
-    #mb_pag {
-        width: 90px;
-        height: 30px;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        flex-direction: row;
-        z-index: 9;
-        justify-content: space-around;
-    }
-
-    #mb_pag > li {
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        line-height: 30px;
-        background-color: cadetblue;
-        text-align: center;
-        cursor: pointer;
-    }
-
-    #mb_pag > li.on {
-        background-color: aquamarine;
-    }
-
-    /*모바일 직원리스트*/
-    #employee > .title {
-        margin-top: 30px;
-    }
-
-    #emplist {
-        flex-basis: 800px;
-        height: auto;
-        flex-wrap: wrap;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    #emplist > li {
-        flex-basis: 300px;
-        height: 320px;
-        border: 1px solid #efefef;
-        box-sizing: border-box;
-        background-color: white;
-        margin-top: 20px;
-    }
-
-    .empImg {
-        width: 100%;
-        height: auto;
-        float: left;
-        background-color: #ffccff;
-    }
-
-    .empImg > img {
-        width: 100%;
-        height: auto;
-        float: left;
-    }
-
-    .empText {
-        width: 100%;
-        height: auto;
-        float: left;
-        padding: 1vw;
-        box-sizing: border-box;
-    }
-
-    .empText > p,
-    .empText > h3 {
-        width: 100%;
-        float: left;
-        margin: 0;
-        margin-top: 10px;
-    }
-
-    .major {
-        font-size: 15px;
-        display: none;
-    }
-
-    .emName {
-        font-size: 25px;
-    }
-
-    .emInt {
-        font-size: 15px;
-    }
-
-    /*#emlist {
-        width: 80%;
-        height: 100%;
-        margin: 0 auto;
-    }
-
-    .closeCir {
-        display: none;
-    }
-
-    #emlist > li {
-        width: 50%;
-        height: 100%;
-        float: left;
-        border: 1px solid cyan;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .emCir {
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-
-    .emCir > img {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-    }*/
-
-    /*모바일 링크*/
-    #mbLink {
-        width: 80%;
-        height: auto;
-        margin: 15px auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    #mbLink > li {
-        flex-basis: 120px;
-        height: auto;
-        position: relative;
-    }
-
-    #mbLink > li > img {
-        width: 80%;
-        height: auto;
-        float: left;
-    }
-
-    #mbLink > li:first-child {
-        margin-left: 5%;
-    }
-
-    #mbLink > li:last-child {
-        margin: 0;
-    }
-
-    .tooltiptext {
-        visibility: hidden;
-        width: 120px;
-        background-color: black;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 0;
-
-        /* Position the tooltip */
-        position: absolute;
-        z-index: 999;
-        left: -12px;
-    }
-
-    /*모바일 네비바에서 나오는 링크*/
-    #modalWrap {
-        width: 100%;
-        height: 50vh;
-        float: left;
-        position: relative;
-    }
-
-    #mbLinkMod {
-        width: 65%;
-        height: auto;
-        margin: 0 auto;
-    }
-
-    #mbLinkMod > li {
-        width: 23%;
-        height: auto;
-        float: left;
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    #mbLinkMod > li > img {
-        width: 100%;
-        height: auto;
-        float: left;
-    }
-
-    .bubble {
-        display: none;
-    }
-
-    /*모바일 풋터*/
-    footer {
-        width: 100%;
-        height: 100px;
-        float: left;
-        background-color: pink;
-        margin-top: 10px;
-        padding-left: 20px;
-        box-sizing: border-box;
-    }
-
-    address {
-        font-size: 14px;
-        font-style: normal;
-        text-align: center;
-        margin-top: 20px;
-        position: relative;
-    }
-
-    #fotImg {
-        width: 100px;
-        height: auto;
-        margin: 0 auto;
-        margin-top: 10px;
-
-    }
-
-    #fotImg > img {
-        width: 100%;
-        height: auto;
-        float: left;
     }
 }

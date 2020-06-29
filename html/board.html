@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        body {
+            width: 70vw;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $.get('board.txt', function(req, res) {
+                let jsFile = JSON.parse(req);
+                let arr=[];
+                let htmlText="";
+                for (let place in jsFile) {
+                    htmlText+=`<tr><td>${place}</td>`;
+                    for (let item in jsFile[place]) {
+                        htmlText+=`<td>${jsFile[place][item]}</td>`;
+                    }
+                    htmlText+="</tr>";
+                    $('tbody').append(htmlText);
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <table class="ui celled table">
+        <thead>
+            <tr>
+                <th>가게명</th>
+                <th>점장이름</th>
+                <th>전화번호</th>
+                <th>지역</th>
+                <th>시/군/구</th>
+                <th>읍/면/동</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body></html>
